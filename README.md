@@ -10,7 +10,7 @@ Para saber mas del conjunto de modulos que compone Diálogo Legislativo, hace [c
 
 ---
 
-## Setup dialogoLegislativo-web
+## Setup dialogo-legislativo-web
 
 > #### ⚠️ NOTAS IMPORTANTES
 > 
@@ -25,8 +25,8 @@ Para saber mas del conjunto de modulos que compone Diálogo Legislativo, hace [c
 Ir a la carpeta del repo y instalar las dependencias.
 
 ```
-dev/:$ cd dialogoLegislativo-web
-dev/dialogoLegislativo-web:$ npm install
+dev/:$ cd dialogo-legislativo-web
+dev/dialogo-legislativo-web:$ npm install
 ```
 Ahora tenemos que crear un archivo `.env` que son nuestras variables de entorno
 
@@ -43,7 +43,7 @@ CONFIDENTIAL_PORT=0
 Comando para ejecutar:
 
 ```
-dev/dialogoLegislativo-web:$ npm run dev
+dev/dialogo-legislativo-web:$ npm run dev
 ```
 
 ### 📓 Note for production build
