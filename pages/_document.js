@@ -132,8 +132,13 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
+<<<<<<< HEAD
           <title>Portal de Leyes Abiertas - H. Cámara de Diputados de la Nación</title>
           <meta name='viewport' content='width=device-width, minimum-scale=1 ,initial-scale=1' />
+=======
+          <title>Portal de Diálogo Legislativo - H. Cámara de Diputados de la Nación</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+>>>>>>> master
           <meta charSet='utf-8' />
           {this.props.styleTags}
           {
