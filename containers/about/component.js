@@ -26,11 +26,7 @@ const About = () => (
     <AboutImg img={'/static/assets/images/foto_acercade.jpg'} imgMobile='/static/assets/images/foto_acercade.jpg' />
     <AboutText>
       <AboutH2>Acerca de</AboutH2>
-<<<<<<< HEAD
-      <AboutP>El <strong>Portal de Leyes Abiertas</strong> es una plataforma de elaboración colaborativa de normas, donde las y los diputados abren a debate sus iniciativas para incorporar puntos de vista ciudadanos.</AboutP>
-=======
       <AboutP>¿Qué es? El <strong>Portal de Diálogo Legislativo</strong> es una plataforma de elaboración colaborativa de normas, donde las y los diputados abren a debate sus iniciativas para incorporar puntos de vista ciudadanos.</AboutP>
->>>>>>> master
       <ArrowRightLink />
     </AboutText>
   </StyledAbout>
