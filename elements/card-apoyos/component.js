@@ -69,7 +69,7 @@ const Contributions = styled.span`
 `
 const Support = styled(Contributions)``
 
-const Social = ({ commentaries, apoyosCount, userIsApoyado, closed }) => (
+const Apoyos = ({ commentaries, apoyosCount, userIsApoyado, closed }) => (
   <Wrapper>
     <CommentaryItems >
       <SocialDiv>
@@ -87,11 +87,8 @@ const Social = ({ commentaries, apoyosCount, userIsApoyado, closed }) => (
   </Wrapper>
 )
 
-Social.propTypes = {
-  commentaries: PropTypes.number,
-  apoyosCount: PropTypes.number,
-  userIsApoyado: PropTypes.bool,
-  closed: PropTypes.bool
+Apoyos.propTypes = {
+  apoyos: PropTypes.list,
 }
 
-export default Social
+export default Apoyos

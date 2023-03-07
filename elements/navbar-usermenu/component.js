@@ -61,7 +61,7 @@ const Arrow = styled.i`
 `
 const IconWrapper = styled.div`
   padding-left:.5rem;
-  color: #5c97bc;
+  color: var(--primary-color);
   `
 
 const UserAvatar = ({ userId, name, party, badge, updatedAt }) => (

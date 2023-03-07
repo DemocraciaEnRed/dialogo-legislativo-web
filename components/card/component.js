@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import CardHeader from '../../elements/card-header/component'
 import CardSocial from '../../elements/card-social/component'
+import CardApoyos from '../../elements/card-apoyos/component'
 import CardContent from '../../elements/card-content/component'
 import WithDocumentTagsContext from '../../components/document-tags-context/component'
 
@@ -11,7 +12,7 @@ const CardContainer = styled.div`
 margin: 0 1% 30px;
 width: 23%;
 box-shadow: 0 4px 20px 0 rgba(0,0,0,0.05);
-background-color: #F1ECEA;
+background-color: var(--white);
 border: solid 1px #e9e9e9;
 box-sizing: border-box;
 cursor: pointer;
@@ -28,6 +29,11 @@ position: relative;
   }
 `
 
+const Hr = styled.hr`
+border: 1px solid var(--gray);
+border-bottom: none:
+`
+
 const Card = ({ project, tags }) => (
   <CardContainer>
     <Link href={{ pathname: '/propuesta', query: { id: project._id } }}>
@@ -42,6 +48,9 @@ const Card = ({ project, tags }) => (
           creationDate={project.currentVersion.createdAt}
           tags={project.currentVersion.content.tags}
           tagList={tags} />
+        <CardApoyos
+          
+        />
         <CardSocial commentaries={project.commentsCount}
           apoyosCount={project.apoyosCount}
           userIsApoyado={project.userIsApoyado} 

@@ -38,12 +38,13 @@ const Avatar = styled.div`
   margin-bottom:${(props) => !props.cardUser && `-20px`};
 `
 const Name = styled.div`
-color: #6CAAE4;
-font-size: 20px;
-font-family:var(--bold);
+color: var(--black);
+font-size: 15px;
+font-family:var(--regular);
 cursor: pointer;
 min-width:100px;
 `
+
 const Party = styled.div`
 font-size: 12px;
 color: #7e7e7e;
@@ -68,9 +69,6 @@ const IconWrapper = styled.div`
 
 const UserAvatar = ({ projectView, userId, name, party, badge,cardUser }) => (
   <Wrapper projectView={projectView}>
-    <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
-      <Avatar projectView={projectView} userId={userId} cardUser={cardUser}/>
-    </Link>
     <TextWrapper>
       <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
         <Name>{name}</Name>

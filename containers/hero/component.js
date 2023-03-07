@@ -36,6 +36,7 @@ background-image: url(${props => props.srcImg});
 background-position: 0; 
 background-repeat: no-repeat;
 background-size: cover;
+min-height: 420px;
 @media (max-width:700px){
   background-position: center; 
   
@@ -119,25 +120,7 @@ const Hero = () => {
     {/* <HeroTitle>Plataforma de Participación Ciudadana en Propuestas de Ley</HeroTitle>
     <HeroSubtitle>¡Participe haciendo aportes para co-crear mejores leyes!</HeroSubtitle>
     <HeroVideo video='argos.hcdn.gob.ar/DMPARL/tutorial.mp4' /> */}
-    <BannerImg srcImg="/static/assets/images/foto_banner_02.jpg">
-      <BannerContent>
-      <BannerTitle>Plataforma de leyes abiertas</BannerTitle>
-      <Hr/>
-      <BannerSubtitles>
-        <Subtitle>Recibí novedades de los proyectos en los temas de tu interés</Subtitle>
-        <Subtitle>Paticipá de la co-creación de leyes</Subtitle>
-        <Subtitle>Comentá, aportá y apoyá proyectos de ley</Subtitle>
-      </BannerSubtitles>
-
-      </BannerContent>
-      <ContentBackground />
-    </BannerImg>
-   {/*  <video key={isMobile} style={{}} id="videobcg" className="fill" width="100%" height="100%" preload="auto" autoPlay={true} loop={true} muted={true} volume="0" poster="/static/assets/images/foto_banner_01.jpg" >
-        {isMobile && <source src="/static/assets/images/banner-mobile.mp4"  type="video/mp4"/> }
-        {!isMobile && <><source src="/static/assets/images/banner-01.webm" type="video/webm" />
-        <source src="/static/assets/images/banner-01.mp4"  type="video/mp4" /> </> }
-      Sorry, your browser does not support HTML5 video.
-    </video> */}
+    <BannerImg srcImg="/static/assets/images/banner_legi.jpg" />
   </StyledHero>)
 }
 

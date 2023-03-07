@@ -89,15 +89,16 @@ justify-content: center;
 
 const LoadMoreButton = styled.div`
 margin: 0 auto;
-font-size: 2.2
-rem;
+font-size: 2.2rem;
 padding: 5px 25px;
-border-radius: 4px;
-border: 1px solid #2c4c61
-cursor: pointer
-color: #2c4c61;
+border-radius: 20px;
+font-family: var(--regular);
+background-color: var(--gray);
+color: var(--primary-color);
+border: 2px solid var(--primary-color);
+cursor: pointer;
 &:hover{
-  background-color: #2c4c61;
+  background-color: var(--primary-color);
   color: #FFF
 }
 &:first-child{
@@ -126,7 +127,7 @@ border-radius:5px;
 padding: 10px 20px;
 font-size: 1.4rem;
 color: #FFF;
-background-color: #5c97bc;
+background-color: var(--primary-color);
 font-family: var(--bold);
 cursor: pointer;
 @media(max-width:700px){
@@ -370,8 +371,8 @@ class Projects extends Component {
     const currentTag = query.tag && tags.find(tag => tag.value === query.tag).label
     return (
       <Section id='projects' noMargin>
-        <TitleH2>Propuestas de ley</TitleH2>
-        <SubtitleH3>Acá podés acceder a las propuestas de ley para leerlas, apoyarlas y hacer tus aportes. ¡Ayudanos a mejorarlas!</SubtitleH3>
+        <TitleH2>Iniciativas legislativas abiertas para la co-creacion</TitleH2>
+        <SubtitleH3>Acá podes acceder a las iniciativas para leerlas, apoyarlas y hacer tus aportes. ¡Ayudanos a mejorarlas!</SubtitleH3>
         <Options>
           <Search type='text' placeholder='Buscá por nombre de la Diputada o Diputado o propuesta' onInput={(e) => this.toggleSort('textFilter', e.target.value)} />
           <OptionsWrapper>
@@ -446,7 +447,7 @@ class Projects extends Component {
         }
         {
           !loading && !loadMoreAvailable  &&
-          <MessagePaginator>No hay más propuestas de leyes</MessagePaginator>
+          <MessagePaginator>No hay más propuestas de iniciativas</MessagePaginator>
         }
       </Section>
     )

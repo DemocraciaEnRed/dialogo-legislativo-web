@@ -11,7 +11,6 @@ import LoggedUser from '../../components/logged-user/component'
 import Notifications from '../../components/notifications-bar/component'
 import UserMenu from '../../components/user-menu/component'
 import Tooltip from '../../components/tooltip/component'
-import StyledNavbarTitle from '../../elements/styled-navbar-title/component'
 
 const StyledNav = styled.nav`
   height:12rem;
@@ -64,7 +63,6 @@ class NavBar extends Component {
 
     return (
       <StyledNav>
-        <StyledNavbarTitle />
         <NavbarLogo />
         {this.props.authContext.authenticated
           ? (

@@ -8,7 +8,7 @@ const StyledText = styled.div`
   padding-top: 6.8rem;
   padding-bottom: 8%;
   width: 80%;
-  background-color: #B6D5F2;
+  background-color: #FAFAFA;
   @media (max-width: 700px) {
     width:100%;
   }

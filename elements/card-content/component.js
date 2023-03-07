@@ -38,7 +38,7 @@ const CardContent = ({ closingDate, closed, creationDate, tags, tagList, project
           <ProjectTag key={i}> {tag} </ProjectTag>
         ))}
       </Tags>}
-      <ProgressBar closingDate={closingDate} creationDate={creationDate} closed={closed} />
+      {/* <ProgressBar closingDate={closingDate} creationDate={creationDate} closed={closed} /> */}
     </Wrapper>
   )
 }

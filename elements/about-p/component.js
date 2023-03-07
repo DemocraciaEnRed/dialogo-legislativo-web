@@ -8,6 +8,7 @@ const AboutP = styled.p`
   font-stretch: normal;
   letter-spacing: normal;
   line-height: 1.67;
+  margin-bottom: 40px
   `
 
 export default AboutP

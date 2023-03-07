@@ -26,7 +26,7 @@ padding-bottom:1rem;
 
 const Title = styled.div`
   margin-top:1rem;
-  font-size:2.7rem;
+  font-size:2rem;
   color:#4C4C4E;
   text-align:left;
   font-family: var(--bold);

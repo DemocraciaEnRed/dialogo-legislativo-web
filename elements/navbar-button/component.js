@@ -11,7 +11,7 @@ const NavbarStyledButton = styled.button`
   padding-bottom:2rem;
   cursor: pointer;
   background:#fff;
-  color: ${(props) => props.primary ? '#5c97bc' : '#4a5d68'};
+  color: ${(props) => props.primary ? 'var(--primary-color)' : '#4a5d68'};
 
 `
 

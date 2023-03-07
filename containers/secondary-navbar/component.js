@@ -13,7 +13,7 @@ const SecondaryBar = styled.div`
   height:6rem;
   display: flex;
   
-  justify-content:center;
+  justify-content:right;
   padding: 2rem 5%;
   z-index:1060;
   transition: height 0.4s ease-out;
@@ -65,12 +65,12 @@ const links = [
     link: '/'
   },
   {
-    name: 'Participá',
+    name: 'Iniciativas',
     hash: '#projects',
     link: '/'
   },
   {
-    name: 'Sobre LA',
+    name: 'Sobre PDL',
     hash: '#__next',
     link: '/info?section=acerca-de'
   }

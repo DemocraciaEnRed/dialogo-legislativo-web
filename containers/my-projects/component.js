@@ -682,7 +682,7 @@ class MyProjects extends Component {
               }
               {
                 !fetching && !fetchMoreAvailable &&
-                <MessagePaginator>No hay más propuestas de leyes</MessagePaginator>
+                <MessagePaginator>No hay más propuestas de iniciativas</MessagePaginator>
               }
             </Section>
           )
@@ -712,7 +712,7 @@ class MyProjects extends Component {
       }
       {
         !fetching && !fetchMoreAvailable  &&
-        <MessagePaginator>No hay más propuestas de leyes</MessagePaginator>
+        <MessagePaginator>No hay más propuestas de iniciativas</MessagePaginator>
       }
       
       </ProjectsNoSession>

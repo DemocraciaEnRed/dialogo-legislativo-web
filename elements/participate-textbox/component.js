@@ -11,7 +11,7 @@ const ParticipateTextbox = styled.div`
   box-sizing: border-box;
 `
 const Span = styled.span`
-  color:#5c97bc;
+  color:var(--primary-color);
   font-family:var(--bold);
   font-size:3rem;
   padding-right:1rem;
@@ -20,7 +20,7 @@ const Span = styled.span`
 const H3 = styled.div`
   font-size:3rem;
   color:#454246;
-  font-family:var(--bold);
+  font-family:var(--regular);
 `
 const ActionWrapper = styled.div`
   display:flex;

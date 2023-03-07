@@ -12,7 +12,7 @@ const StyledSection = styled.section`
     box-sizing: border-box;
     background-color: #fff;
     > h2 {
-        color: #2c4c61;
+        color: var(--gray);
       }
     }
     @media (max-width:700px){
