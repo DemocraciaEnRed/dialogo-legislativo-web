@@ -48,9 +48,6 @@ const Card = ({ project, tags }) => (
           creationDate={project.currentVersion.createdAt}
           tags={project.currentVersion.content.tags}
           tagList={tags} />
-        <CardApoyos
-          
-        />
         <CardSocial commentaries={project.commentsCount}
           apoyosCount={project.apoyosCount}
           userIsApoyado={project.userIsApoyado} 

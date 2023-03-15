@@ -21,7 +21,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   padding: 0 2rem;
   font-family: var(--bold);
-  background-color: var(--gray);
+  background-color: var(--white);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
   
