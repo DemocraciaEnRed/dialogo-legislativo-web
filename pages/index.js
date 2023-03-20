@@ -16,7 +16,7 @@ export default () => (
     <Projects />
     <Participate />
     <About />
-    <SecondaryFooter />
+    {/* <SecondaryFooter /> */}
     <Footer />
   </div>
 )

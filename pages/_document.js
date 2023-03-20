@@ -77,8 +77,8 @@ injectGlobal`
 
     /* Fonts */
     --regular: 'Epilogue-Regular';
-    --black: 'Epilogue-Black';
-    --black-italic: 'Epilogue-BlackItalic';
+    // --black: 'Epilogue-Black';
+    // --black-italic: 'Epilogue-BlackItalic';
     --bold: 'Epilogue-Bold';
     --bold-italic: 'Epilogue-BoldItalic';
     --italic: 'Epilogue-Italic';

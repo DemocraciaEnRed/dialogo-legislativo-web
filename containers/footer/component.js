@@ -5,18 +5,110 @@ import P from '../../elements/footer-text/component'
 
 const FooterWrapper = styled.footer`
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--black);
   display:flex;
-  flex-direction:column;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content:center;
+  align-items: center;
+  height: 260px;
+  text-align: center;
 `
+
+const Info = styled.div`
+  width: 50%;
+  text-align: left;
+  // padding: 10%
+`
+
+
+const Logo = styled.div`
+  width: 200px;
+  height: 65px;
+  background-image:url(${'/static/assets/logo_fondo_negro.png'});
+  background-size: cover;a
+  // background-position: center;  
+  @media (max-width: 760px) {
+    width: 67px;
+    height: 51px;
+    margin-top:auto;
+  }
+`
+
+
+const H2 = styled.h2`
+  color: var(--white);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`
+
+const Li = styled.li`
+  color: var(--white);
+  font-size: 1.6em;
+`
+const Links = styled.div`
+  text-align: right;
+  width: 30%;
+`
+
+const Sections = styled.div`
+  display: flex
+`
+
+const links = [
+  {
+    name: 'Inicio',
+    hash: '#__next',
+    link: '/'
+  },
+  {
+    name: 'Iniciativas',
+    hash: '#projects',
+    link: '/'
+  },
+  {
+    name: 'Sobre PDL',
+    hash: '#__next',
+    link: '/info?section=acerca-de'
+  }
+]
+
+const FooterLink = ({ name, link, hash }) => {
+  const move = async () => {
+    await router.push(link)
+    jump(hash)
+  }
+
+  return (
+    <a onClick={() => move()} style={{'padding': '10px', 'color': 'var(--white)', 'font-size': '1.5rem'}}>
+      { name }
+    </a>
+  )
+}
+
 
 const Footer = () => (
   <FooterWrapper>
-    <FooterTextWrapper>
-      <P><strong>Honorable Cámara de Diputados de la Nación Argentina</strong> | Congreso de la Nación Argentina | Av. Rivadavia 1864 | Ciudad Autónoma de Bs. As. (C.P. C1033AAV) | (54-11) 6075-7100</P>
-      <P>Nota: La información contenida en este sitio es de dominio público y puede ser utilizada libremente. Se solicita citar la fuente.</P>
-    </FooterTextWrapper>
+      <Info>
+        <Logo />  
+        <H2>Contacto:</H2>
+        <ul>
+          <Li>Dirección General de Modernización, Fortalecimiento Institucional y Sustentabilidad</Li>
+          <Li>dg.modernizacion@legislatura.gob.ar</Li>
+          <Li>(011) 4338-3000 Int. 1135</Li>
+        </ul>
+      </Info>
+      <Links>
+        <Sections>
+          {links.map((li, i) => {
+            return <FooterLink
+              key={i}
+              name={li.name}
+              link={li.link}
+              hash={li.hash} />
+          })}
+        </Sections>
+      </Links>
   </FooterWrapper>
 )
 
