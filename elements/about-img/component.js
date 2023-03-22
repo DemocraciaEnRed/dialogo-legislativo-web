@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const StyledImg = styled.div`
   height: 350px;
   width: 500px;
-  background-color: #5c97bc;
+  background-color: var(--primary-color);
   background-image:  url('${(props) => props.img}');
 
   background-repeat: no-repeat;

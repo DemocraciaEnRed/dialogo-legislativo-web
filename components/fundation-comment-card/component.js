@@ -44,14 +44,14 @@ const UserAvatar = styled.div`
   `
 
 const Username = styled.div`
-  color: #2d4b5e;
+  color: var(--primary-color);
   font-size: 1.4rem;
   font-family:var(--bold);
   padding-bottom:0.5rem;`
 
 const Charge = styled.div`
   font-size:1.2rem;
-  color:  #5c97bc;
+  color:  var(--primary-color);
   text-transform:uppercase;
 `
 
@@ -62,7 +62,7 @@ const TextWrapper = styled.div`
 
 const StyledLikeWrapper = styled.span`
   padding-top: 15px;
-  color: ${({ liked }) => liked ? '#1fcc1b' : '#5c97bc'};
+  color: ${({ liked }) => liked ? '#1fcc1b' : 'var(--primary-color)'};
   &:hover{
     color: #ef885d;
     cursor: pointer;
@@ -75,7 +75,7 @@ const StyledLikeWrapper = styled.span`
 const StyledDeleteWrapper = styled.span`
   padding-top: 15px;
   margin-left: 10px;
-  color: #5c97bc;
+  color: var(--primary-color);
   &:hover{
     color: #ef885d;
     cursor: pointer;
@@ -87,7 +87,7 @@ const StyledDeleteWrapper = styled.span`
 const StyledReplyWrapper = styled.span`
   padding-top: 15px;
   margin-left: 10px;
-  color: #5c97bc;
+  color: var(--primary-color);
   &:hover{
     color: blue;
     cursor: pointer;
@@ -113,7 +113,7 @@ const ChargeWrapper = styled.div`
 
 const IconWrapper = styled.div`
   padding-right:.5rem;
-  color: #5c97bc;
+  color: var(--primary-color);
 `
 
 const DeletedNotice = styled.div`

@@ -5,7 +5,7 @@ const NavbarStyledButton = styled.button`
   max-width: 130px;
   height: 22px;
   font-size: ${(props) => props.bigger ? '1.6rem' : '1.4rem'};
-  color: #5c97bc;
+  color: var(--primary-color);
   border-style: none;
   padding-left:1.5rem;
   padding-bottom:2rem;

@@ -287,7 +287,7 @@ const ProjectsTableCell = styled.td`
   text-align: ${(props) => props.centered ? 'center' : 'left'};
   border-bottom: 1px solid #cacaca;
   & > a{
-    color: #5c97bc
+    color: var(--primary-color)
   }
   & > a:hover{
     color: red;
@@ -307,9 +307,9 @@ const ProjectsTableHeader = styled.th`
 const ButtonTable = styled.div`
   padding: 5px 20px;
   margin: 10px;
-  border: 1px solid #5c97bc;
+  border: 1px solid var(--primary-color);
   border-radius: 5px;
-  color: #5c97bc;
+  color: var(--primary-color);
   font-size: 17px;
   text-align: center;
   float: ${(props) => props.float || 'none'};
@@ -317,7 +317,7 @@ const ButtonTable = styled.div`
     float: none;
   }
   &:hover {
-    background-color: #5c97bc;
+    background-color: var(--primary-color);
     color: #FFF;
     cursor: pointer;
   }

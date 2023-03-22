@@ -20,7 +20,7 @@ margin-top:1rem;
 font-size:1.2rem;
 text-transform:uppercase;
 text-align:left;
-color:#5c97bc;
+color:var(--primary-color);
 padding-bottom:1rem;
 `
 

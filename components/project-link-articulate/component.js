@@ -8,7 +8,7 @@ import ArrowRight from '../../elements/arrow-right/component'
 const StyledButton = styled.button`
   width: 100%;
   height: auto;
-  background-color: #5c97bc;
+  background-color: var(--primary-color);
   padding:15px 10px;
   padding-right: 40px;
   font-size: 2rem;

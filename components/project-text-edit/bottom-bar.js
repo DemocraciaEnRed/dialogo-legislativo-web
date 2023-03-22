@@ -22,7 +22,7 @@ const Container = styled.div`
 `
 
 const StyledButton = styled.button`
-  background-color: #5c97bc;
+  background-color: var(--primary-color);
   border-radius: 21px;
   width: 180px;
   height: 42px;

@@ -6,8 +6,8 @@ const StyledProfileCharge = styled.div`
   font-size: 2.2rem;
   font-family:var(--bold);
   line-height: 1.55;
-  color: #5c97bc;
-  color:#5c97bc;
+  color: var(--primary-color);
+  color:var(--primary-color);
   text-transform:uppercase;
   margin:1rem 0rem;`
 const ProfileCharge = ({ charge }) => (

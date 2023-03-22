@@ -16,7 +16,7 @@ const SubtitleContainer = styled.p`
 
 const MoreLink = styled.span`
   // font-size: 1.2rem;
-  color: #5c97bc;
+  color: var(--primary-color);
   text-transform: uppercase;
   & > a {
   // font-family: var(--bold);

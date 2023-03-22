@@ -12,6 +12,7 @@ justify-content:center;
 color: var(--white);
 box-sizing:border-box;
 background-color: var(--primary-color);
+
 `
 const CommentaryItems = styled.div`
 display: flex;
@@ -61,10 +62,10 @@ const SocialDiv = styled.div`
 
 
 const Span = styled.span`
-  font-family: var(--ligth);
+  color: var(--white);
 `
 const Contributions = styled.span`
-  font-family: var(--ligth);
+  color: var(--white);
   margin: 0 8px
 `
 const Support = styled(Contributions)``

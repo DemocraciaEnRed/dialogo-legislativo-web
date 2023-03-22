@@ -9,13 +9,13 @@ const StaticInfoButton = styled.button`
   color: #454246;
   &:hover{
     cursor: pointer;
-    color: #5c97bc;
+    color: var(--primary-color);
   }
   &:not(:last-child)  {
     border-bottom: solid 1px #dae1e7;
   }
   &.active {
-    color: #5c97bc;
+    color: var(--primary-color);
   }
 `
 

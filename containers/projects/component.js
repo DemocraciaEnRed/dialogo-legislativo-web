@@ -38,7 +38,7 @@ background-color: #F1ECEA;
   border-color: #777;
 }
 &.active{
-  background-color: #567B9A;
+  background-color: var(--primary-color);
   color: #FFF
 }
 `
@@ -73,7 +73,7 @@ flex-direction: column;
 `
 const OptionLabel = styled.div`
 font-size: ${(props) => props.isTitle || props.isTopTitle ? '1.6rem' : '1.4rem'};
-color: ${(props) => props.isTitle || props.isTopTitle ? '#000' : '#567B9A'}; 
+color: ${(props) => props.isTitle || props.isTopTitle ? '#000' : 'var(--primary-color)'}; 
 padding: ${(props) =>  props.isTopTitle && '10px 20px'};
 font-weight: 'normal';
 display: ${(props) => props.isTitle || props.isTopTitle ? 'block' : 'inline-block'};
@@ -132,7 +132,7 @@ font-family: var(--bold);
 cursor: pointer;
 @media(max-width:700px){
   margin-top: 8px;
-  color: #5c97bc;
+  color: var(--primary-color);
   background-color:#fff0;
  }
 `

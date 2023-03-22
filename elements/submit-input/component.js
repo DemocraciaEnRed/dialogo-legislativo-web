@@ -4,13 +4,14 @@ const SubmitInput = styled.input`
   min-width: 125px;
   max-width: 230px;
   height: 39px;
-  background-color: #5c97bc;
+  background-color: var(--secondary-color);
   font-size: 1.4rem;
   color: var(--white);
   border-style: none;
   cursor: pointer;
   padding: 0 2rem;
   font-family: var(--bold);
+  border-radius: 39.0428px;
 `
 
 export default SubmitInput

@@ -22,12 +22,12 @@ const StyledCommentsGrid = styled.div`
 const CloseGrid = styled.div`
   padding: 7px;
   font-size: 12px;
-  color: #2d4b5e;
+  color: var(--primary-color);
   border-bottom: 1px solid #dae1e7;
   text-align: right
   &:hover{
     cursor: pointer;
-    color: #5c97bc;
+    color: var(--primary-color);
   }
   position: sticky;
   top: 0;

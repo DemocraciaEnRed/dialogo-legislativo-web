@@ -10,7 +10,7 @@ import StaticInfoBold from '../../elements/static-info-bold/component'
 
 const ManualLink = styled.span`
   text-decoration: underline
-  color: #5c97bc;
+  color: var(--primary-color);
   &:hover{
     cursor: pointer;
   }

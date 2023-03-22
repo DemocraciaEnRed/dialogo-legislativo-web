@@ -859,7 +859,7 @@ const LabelOptionSource = styled.label`
   cursor:pointer;
   text-transform:capitalize;
   display:inline-block;
-  background-color:${props => props.active && '#567B9A'};
+  background-color:${props => props.active && 'var(--primary-color)'};
   color:${props => props.active ? '#fff' : '#203340'};
   &:last-child{
     border-right:solid 1px #dae1e7;

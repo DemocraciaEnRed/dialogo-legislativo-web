@@ -13,8 +13,8 @@ border: none;
 padding:9px 20px;
 //text-transform: uppercase;
 font-size: 1.4rem;
-color:#567B9A;
-background-color: ${(props) => props.active ? '#567B9A' : 'white'};
+color:var(--primary-color);
+background-color: ${(props) => props.active ? 'var(--primary-color)' : 'white'};
 font-family: ${(props) => props.active ? 'var(--bold)' : 'var(--regular)'};
 @media(max-width:760px){
     padding:9px;

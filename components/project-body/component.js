@@ -41,7 +41,7 @@ const H2 = styled.h2`
   font-stretch: normal;
   line-height: 1.42;
   letter-spacing: normal;
-  color: #5c97bc;
+  color: var(--primary-color);
   padding-bottom:4rem;`
 
 const BoldP = styled.p`

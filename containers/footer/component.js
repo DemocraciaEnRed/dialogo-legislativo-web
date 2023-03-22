@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import FooterTextWrapper from '../../elements/footer-text-wrapper/component'
 import P from '../../elements/footer-text/component'
+import Icon from 'react-icons-kit'
+import { facebook } from 'react-icons-kit/fa/facebook'
 
 const FooterWrapper = styled.footer`
   width: 100%;

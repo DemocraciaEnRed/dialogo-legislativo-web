@@ -48,7 +48,7 @@ margin:23px 8px;
 min-width: 125px;
 max-width: 230px;
 height: 39px;
-background-color: ${(props) => props.type === 'deleteButton' ? '#CF1419': '#5c97bc'};
+background-color: ${(props) => props.type === 'deleteButton' ? '#CF1419': 'var(--primary-color)'};
 font-size: 1.4rem;
 color: var(--white);
 border-style: none;

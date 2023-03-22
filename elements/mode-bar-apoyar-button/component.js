@@ -9,12 +9,12 @@ const StyledButton = styled.button`
   padding: 5px 40px 10px 40px;
   font-size: 1.4rem;
   color: ${(props) => props.active ? '#4a5d68' : '#fff'};
-  background-color: ${(props) => props.active ? 'white' : '#567B9A'};
+  background-color: ${(props) => props.active ? 'white' : 'var(--primary-color)'};
   font-family: ${(props) => props.active ? 'var(--bold)' : 'var(--regular)'};
   cursor: ${(props) => props.project && !props.project.closed ? 'pointer' : 'auto'};
   font-weight: bold;
   :hover{
-    background-color:#5c97bc;
+    background-color:var(--primary-color);
   }
   @media(max-width:700px){
     padding: 10px 9px;

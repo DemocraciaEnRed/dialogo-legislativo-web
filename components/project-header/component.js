@@ -33,7 +33,7 @@ import ProgressBar from '../../elements/progress-bar/component'
 const ProjectHeaderContainer = styled.div`
   min-height: 383px;
   width:100%;
-  background-color: #395595;
+  background-color: #ac9bd9;
   //background-image: url('${(props) => props.img}');
   background-size: cover;
   background-position: center;
@@ -92,7 +92,7 @@ const TopBarWrapper = styled.div`
   `
 
 const SharerButton = styled(ModeBarLinkButton)`
-color:#567B9A;
+color:var(--primary-color);
 `
 
 const SharerSpan = styled.span`

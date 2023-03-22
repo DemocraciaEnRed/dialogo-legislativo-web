@@ -101,7 +101,7 @@ injectGlobal`
   padding: 0;
   box-sizing: border-box;
   font-family: var(--regular), 'Epilogue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: var(--black);
+  // color: var(--black);
   }
   
   body {
@@ -109,7 +109,7 @@ injectGlobal`
     padding:0;
     width: 100%;
     background-color: var(--white);
-    color: var(--black);
+    // color: var(--black);
     font-family: var(--regular), 'Epilogue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 

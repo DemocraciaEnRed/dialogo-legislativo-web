@@ -23,7 +23,7 @@ const RemainingDays = styled.span`
 `
 
 const Progress = styled.div`
-background-color:#6CAAE4;
+background-color:var(--primary-color);
 flex:1;
 width:${(props) => props.progress}%;
 height:40px;

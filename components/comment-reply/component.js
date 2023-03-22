@@ -13,7 +13,7 @@ const { publicRuntimeConfig: { API_URL } } = getConfig()
 
 const ReplySection = styled.div`
   margin-left: 15px;
-  border-left: 1px solid #5c97bc;
+  border-left: 1px solid var(--primary-color);
 `
 
 const ReplyText = styled.p`
@@ -21,7 +21,7 @@ const ReplyText = styled.p`
   line-height: 1.5em !important;
   padding: 0.5rem 1rem;
   // margin-top: 1rem;
-  border-left: 1px solid #5c97bc;
+  border-left: 1px solid var(--primary-color);
   
   margin-left: 15px;
   margin-top: 0 !important;
@@ -31,7 +31,7 @@ const ReplyText = styled.p`
 `
 
 const AutorName = styled.span`
-  color: #2d4b5e;
+  color: var(--primary-color);
   font-size: 1.2em !important;
   font-family: var(--bold);
 `
@@ -51,20 +51,20 @@ const InputBox = styled.textarea`
 `
 
 const ActionButton = styled.div`
-  // border: 1px solid #5c97bc;
-  color: #5c97bc;
+  // border: 1px solid var(--primary-color);
+  color: var(--primary-color);
   // padding: 0.7rem;
   width: 95%;
   font-size: 1.4rem;
   margin: 1rem 1rem;
   cursor: pointer;
   text-align: right;
-  // background-color: #5c97bc;
+  // background-color: var(--primary-color);
   // color: #fff;
   // font-family: var(--bold);
 `
 const ReplyButton = styled.div`
-  color: #5c97bc;
+  color: var(--primary-color);
   // margin: 1rem 0;
   text-align:right;
   // margin-bottom: 3.3em;
