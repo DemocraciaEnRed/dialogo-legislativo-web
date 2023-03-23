@@ -3,7 +3,7 @@
 # Diálogo Legislativo - Frontend
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DemocraciaEnRed_dialogo-legislativo-web&metric=alert_status)](https://sonarcloud.io/dashboard?id=DemocraciaEnRed_dialogo-legislativo-web)
-[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/dialogo-legislativo-notifier)](https://github.com/DemocraciaEnRed/dialogo-legislativo-notifier/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/DemocraciaEnRed/dialogo-legislativo-web)](https://github.com/DemocraciaEnRed/dialogo-legislativo-notifier/blob/master/LICENSE)
 
 Este es uno de los cuatros modulos que se requieren descargar, hacer setup e instalar cada uno de los repositorios para poder utilizar Diálogo Legislativo.
 Para saber mas del conjunto de modulos que compone Diálogo Legislativo, hace [click aqui](https://github.com/DemocraciaEnRed/dialogo-legislativo) 
@@ -16,7 +16,7 @@ Para saber mas del conjunto de modulos que compone Diálogo Legislativo, hace [c
 > 
 > El siguiente conjunto de sistemas requiere de:
 > - Mongo3.6
-> - Keycloak 4.4.x o 6.0.x
+> - Keycloak > 4.4.x
 > 
 > Sobre Mongo3.6, es necesario que instales mongo 3.6 en tu computadora, con una base de datos llamada "dialogoLegislativo". No hace falta crear alguna collection, eso lo hace la app en inicio.
 > 
@@ -43,39 +43,9 @@ CONFIDENTIAL_PORT=0
 Comando para ejecutar:
 
 ```
-dev/dialogo-legislativo-web:$ npm run dev
+dev/dialogo-legislativo-web:$ ./run-dev.sh
 ```
 
-### 📓 Note for production build
-
-> ⚠ **Ignore this if you dont work in this project.**
-
-- Be sure to use `"keycloak-js": "4.4.0"` in `package.json` for production builds.
-
-**For development**
-
-Make sure you have this in the package.json in your local env
-
-```json
-"keycloak-js": "6.0.1"    
-```
-In file `containers/app-wrapper/component.js`, change line 75
-```
-75|    const authenticated = await keycloak.init({ onLoad: 'check-sso', promiseType: 'native' })
-```
-
-**For production**
-
-Make sure its like this in the package.json
-
-```json
-"keycloak-js": "4.4.0"
-```
-In file `containers/app-wrapper/component.js`, change line 75
-
-```
-75|    const authenticated = await keycloak.init({ onLoad: 'check-sso' })
-```
 
 ---
 
