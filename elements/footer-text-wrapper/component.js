@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const StyledText = styled.div`
-  background-color: #5c98bd;
+  background-color: var(--black);
   display:flex;
   flex-direction:column;
   justify-content:center;

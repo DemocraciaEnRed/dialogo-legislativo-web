@@ -41,7 +41,7 @@ const RightContainer = styled.div`
   padding-left:20px;
 `
 const TagTitle = styled.div`
-  color:#5c97bc;
+  color:var(--primary-color);
   font-size:1.4rem;
   text-align:left;
   text-transform:uppercase;

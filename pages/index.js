@@ -11,12 +11,12 @@ import Footer from '../containers/footer/component'
 export default () => (
   <div>
     <NavBar />
-    <SecondaryNavbar isLanding />
+    <SecondaryNavbar />
     <Hero />
     <Projects />
     <Participate />
     <About />
-    <SecondaryFooter />
+    {/* <SecondaryFooter /> */}
     <Footer />
   </div>
 )

@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Title = styled.h3`
+const Title = styled.p`
   font-size: 1.4rem;
-  color: #101a21;
+  color: var(--gray);
   padding:0 10 10 0;
   line-height: 3.5;
 `

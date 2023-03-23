@@ -23,13 +23,13 @@ const Avatar = styled.div`
   background-position: center;
 `
 const Name = styled.div`
-color: #2d4b5e;
+color: var(--primary-color);
 font-size: 1.6rem;
 font-family:var(--bold);
 `
 const Party = styled.div`
 font-size:1.2rem;
-color: #5c97bc;
+color: var(--primary-color);
 text-transform:uppercase;
 display:flex;
 margin-top:0px;
@@ -61,7 +61,7 @@ const Arrow = styled.i`
 `
 const IconWrapper = styled.div`
   padding-left:.5rem;
-  color: #5c97bc;
+  color: var(--primary-color);
   `
 
 const UserAvatar = ({ userId, name, party, badge, updatedAt }) => (

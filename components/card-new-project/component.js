@@ -18,7 +18,7 @@ position: relative;
 justify-content:center;
 box-sizing: border-box;
 cursor: pointer;
-border: 4px dotted #5c97bc;
+border: 4px dotted var(--primary-color);
 font-size: 2em;
 opacity: 0.5;
 &:hover{
@@ -36,7 +36,7 @@ const CardNewProjectContent = styled.div`
 text-align: center;
 padding: 80px 0px;
 
-color: #5c97bc;
+color: var(--primary-color);
 `
 
 const spin = styled.p`

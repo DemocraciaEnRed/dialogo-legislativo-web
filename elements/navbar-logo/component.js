@@ -9,9 +9,9 @@ justify-content:center;
 `
 
 const Logo = styled.div`
-  width: 130px;
+  width: 300px;
   height: 98px;
-  background-image:url(${'/static/assets/diputados.png'});
+  background-image:url(${'/static/assets/logo.png'});
   background-size: cover;
   background-position: center;  
   box-sizing: border-box;

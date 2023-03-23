@@ -16,64 +16,76 @@ const { publicRuntimeConfig: {
 
 injectGlobal`
   @font-face {
-    font-family: Roboto-Black;
-    src: url('/static/fonts/Roboto/Roboto-Black.ttf');
+    font-family: Epilogue-Black;
+    src: url('/static/fonts/Epilogue/Epilogue-Black.ttf');
   }
 
   @font-face {
-    font-family: Roboto-BlackItalic;
-    src: url('/static/fonts/Roboto/Roboto-BlackItalic.ttf');
+    font-family: Epilogue-BlackItalic;
+    src: url('/static/fonts/Epilogue/Epilogue-BlackItalic.ttf');
   }
 
   @font-face {
-    font-family: Roboto-Bold;
-    src: url('/static/fonts/Roboto/Roboto-Bold.ttf');
+    font-family: Epilogue-Bold;
+    src: url('/static/fonts/Epilogue/Epilogue-Bold.ttf');
   }
 
   @font-face {
-    font-family: Roboto-BoldItalic;
-    src: url('/static/fonts/Roboto/Roboto-BoldItalic.ttf');
+    font-family: Epilogue-BoldItalic;
+    src: url('/static/fonts/Epilogue/Epilogue-BoldItalic.ttf');
   }
 
   @font-face {
-    font-family: Roboto-Italic;
-    src: url('/static/fonts/Roboto/Roboto-Italic.ttf');
+    font-family: Epilogue-Italic;
+    src: url('/static/fonts/Epilogue/Epilogue-Italic.ttf');
   }
 
   @font-face {
-    font-family: Roboto-Medium;
-    src: url('/static/fonts/Roboto/Roboto-Medium.ttf');
+    font-family: Epilogue-Medium;
+    src: url('/static/fonts/Epilogue/Epilogue-Medium.ttf');
   }
 
   @font-face {
-    font-family: Roboto-MediumItalic;
-    src: url('/static/fonts/Roboto/Roboto-MediumItalic.ttf');
+    font-family: Epilogue-MediumItalic;
+    src: url('/static/fonts/Epilogue/Epilogue-MediumItalic.ttf');
   }
 
   @font-face {
-    font-family: Roboto-Regular;
-    src: url('/static/fonts/Roboto/Roboto-Regular.ttf');
+    font-family: Epilogue-Regular;
+    src: url('/static/fonts/Epilogue/Epilogue-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: Epilogue-Light;
+    src: url('/static/fonts/Epilogue/Epilogue-Light.ttf')
+  }
+
+  @font-face {
+    font-family: Epilogue-LightItalic;
+    src: url('/static/fonts/Epilogue/Epilogue-LightItalic.ttf')
   }
 
   :root {
     /* Colors */
     --white: #FFFFFF;
     --black: #000000;
-    --gray: #B8B8B8;
-    --primary-color: #5182A0;
-    --secondary-color: #A5CEE7;
+    --gray: #686868;
+    --primary-color: #8665E0;
+    --secondary-color: #AD9CDA;
     --highlight: #ED8862;
     --warning: #E86062;
 
     /* Fonts */
-    --regular: 'Roboto-Regular';
-    --black: 'Roboto-Black';
-    --black-italic: 'Roboto-BlackItalic';
-    --bold: 'Roboto-Bold';
-    --bold-italic: 'Roboto-BoldItalic';
-    --italic: 'Roboto-Italic';
-    --medium: 'Roboto-Medium';
-    --medium-italic: 'Roboto-MediumItalic';
+    --regular: 'Epilogue-Regular';
+    // --black: 'Epilogue-Black';
+    // --black-italic: 'Epilogue-BlackItalic';
+    --bold: 'Epilogue-Bold';
+    --bold-italic: 'Epilogue-BoldItalic';
+    --italic: 'Epilogue-Italic';
+    --medium: 'Epilogue-Medium';
+    --medium-italic: 'Epilogue-MediumItalic';
+    --light: Epilogue-Light
+    --light-Italic: Epilogue-LightItalic
 
     /*background sizes */
     --lined: calc(width/22);
@@ -88,8 +100,8 @@ injectGlobal`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--regular), 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: var(--black);
+  font-family: var(--regular), 'Epilogue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // color: var(--black);
   }
   
   body {
@@ -97,8 +109,8 @@ injectGlobal`
     padding:0;
     width: 100%;
     background-color: var(--white);
-    color: var(--black);
-    font-family: var(--regular), 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    // color: var(--black);
+    font-family: var(--regular), 'Epilogue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   a {

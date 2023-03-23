@@ -15,9 +15,9 @@ import Tooltip from '../../components/tooltip/component'
 const StyledNav = styled.nav`
   height:12rem;
   display: flex;
-  padding:1rem 4.5%;
+  padding:1rem 6.4%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom:1px solid #dae1e7;
 `
 
@@ -63,7 +63,6 @@ class NavBar extends Component {
 
     return (
       <StyledNav>
-        <BetaLabel />
         <NavbarLogo />
         {this.props.authContext.authenticated
           ? (

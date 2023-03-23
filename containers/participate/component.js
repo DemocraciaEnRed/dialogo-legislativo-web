@@ -28,20 +28,20 @@ const Participate = (props) => {
       <ParticipateTitle>¿Cómo participar?</ParticipateTitle>
       <ParticipateContainer>
         <ParticipateItem>
-          <ParticipateTextbox number={'1'} action={'Infórmese'} />
-          <ParticipateP text={'Ingrese y lea las propuestas y proyectos de ley abiertos a la co-creación.'} />
+          <ParticipateTextbox number={'1'} action={'Informate'} />
+          <ParticipateP text={'Ingresá y leé las iniciativas.'} />
         </ParticipateItem>
         <ParticipateItem>
-          <ParticipateTextbox number={'2'} action={'Participe'} />
-          <ParticipateP text={'Comente, proponga aportes sobre los textos y apoye las propuestas.'} />
+          <ParticipateTextbox number={'2'} action={'Participá'} />
+          <ParticipateP text={'Dejá tus comentarios sobre las iniciativas y hacé aportes de forma general o por articulado.'} />
         </ParticipateItem>
         <ParticipateItem>
-          <ParticipateTextbox number={'3'} action={'Involúcrese'} />
-          <ParticipateP text={'Comparta para que más ciudadanos se involucren y siga la evolución de las propuestas.'} />
+          <ParticipateTextbox number={'3'} action={'Involucrate'} />
+          <ParticipateP text={'Compartí las propuestas para que más ciudadanos/as las conozcan y se involucren.'} />
         </ParticipateItem>
       </ParticipateContainer>
       <Link href='/info?section=como-participar'>
-        <Button primary>Conozca más</Button>
+        <Button primary>Conocé más</Button>
       </Link>
     </StyledParticipateSection>
   )

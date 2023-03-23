@@ -16,7 +16,7 @@ const Span = styled.span`
 const ItemStyle = styled.p`
   font-size: 1.6rem;
   font-family: var(--medium);
-  color: #2d4b5e; 
+  color: var(--primary-color); 
   margin-bottom: 0.5rem;
 `
 const BarActivitySubtitle = ({ number, children }) => (

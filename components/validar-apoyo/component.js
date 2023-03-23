@@ -23,7 +23,7 @@ const Box = styled.div`
 const Note = styled.div`
   font-size: 1.6rem;
   a {
-    color:#5c97bc
+    color:var(--primary-color)
     font-weight: bold;
   }
   a:hover,a:active,a:focus {

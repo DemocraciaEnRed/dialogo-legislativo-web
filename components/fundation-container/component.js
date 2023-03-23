@@ -24,7 +24,7 @@ const FinalWords = styled.div`
   border-top: 1px solid #dae1e7;
 `
 const FinalWordsTitle = styled.h1`
-  color: #5c97bc;
+  color: var(--primary-color);
   font-size: 3rem;
   margin-bottom: 10px;
 `
@@ -43,7 +43,7 @@ const H2 = styled.h2`
   font-stretch: normal;
   line-height: 1.42;
   letter-spacing: normal;
-  color: #5c97bc;
+  color: var(--primary-color);
   padding-bottom:4rem;`
 
 const P = styled.p`

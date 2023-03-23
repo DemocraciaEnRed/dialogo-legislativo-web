@@ -8,16 +8,17 @@ const StyledButton = styled.button`
   height: 39px;
   background-color: var(--white);
   font-size: 1.4rem;
-  color: #5c97bc;
-  border-style: none;
+  color: var(--primary-color);
+  border-radius: 20px;
   cursor: pointer;
   padding: 0 2rem;
   font-family: var(--bold);
 /* primary = blue background, secondary = white background */
-  background-color: ${(props) => props.primary ? '#5c97bc' : 'var(--white)'};
+  background-color: ${(props) => props.primary ? 'var(--primary-color)' : 'var(--white)'};
   color: ${(props) => props.primary ? 'var(--white)' : '#2c4c61'};
-  border: ${(props) => props.withBorder ? 'solid 2px #5c97bc' : 'none'};
+  border: ${(props) => props.withBorder ? 'solid 2px var(--primary-color)' : 'none'};
   align-self: ${(props) => props.center ? 'center' : 'auto'};
+  
 `
 
 const styledButton = (props) => (

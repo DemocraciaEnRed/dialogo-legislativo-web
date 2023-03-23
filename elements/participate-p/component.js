@@ -11,7 +11,7 @@ const ParticipateP = styled.p`
   font-stretch: normal;
   line-height: 1.56;
   letter-spacing: normal;
-  color: #4a5d68;
+  color: var(--black);
 `
 const participateP = ({ text }) => (
   <ParticipateP>

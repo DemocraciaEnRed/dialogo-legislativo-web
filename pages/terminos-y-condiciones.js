@@ -12,7 +12,7 @@ export default class extends Component {
         <NavBar />
         <SecondaryNavbar />
         <TerminosYCondiciones />
-        <SecondaryFooter />
+        {/* <SecondaryFooter /> */}
         <Footer />
       </div>
     )

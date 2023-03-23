@@ -31,7 +31,7 @@ const Name = styled.div`
 `
 const Subtitle = styled.div`
   font-size:1.2rem;
-  color: #5c97bc;
+  color: var(--primary-color);
   font-size: 12px;
   text-transform:uppercase;
   display:flex;
