@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import FooterTextWrapper from '../../elements/footer-text-wrapper/component'
 import P from '../../elements/footer-text/component'
 import Icon from 'react-icons-kit'
-import { facebook } from 'react-icons-kit/fa/facebook'
+import { facebook, twitter, instagram, youtube } from 'react-icons-kit/fa'
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -15,12 +15,13 @@ const FooterWrapper = styled.footer`
   align-items: center;
   height: 260px;
   text-align: center;
+  color: var(--white)
 `
 
 const Info = styled.div`
   width: 50%;
   text-align: left;
-  // padding: 10%
+  padding-left: 10%
 `
 
 
@@ -29,7 +30,6 @@ const Logo = styled.div`
   height: 65px;
   background-image:url(${'/static/assets/logo_fondo_negro.png'});
   background-size: cover;a
-  // background-position: center;  
   @media (max-width: 760px) {
     width: 67px;
     height: 51px;
@@ -39,22 +39,24 @@ const Logo = styled.div`
 
 
 const H2 = styled.h2`
-  color: var(--white);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
 `
 
 const Li = styled.li`
-  color: var(--white);
   font-size: 1.6em;
 `
+
+
 const Links = styled.div`
   text-align: right;
-  width: 30%;
+  width: 50%;
+  padding-right: 10%
+  justify-content:flex-end;
 `
 
 const Sections = styled.div`
-  display: flex
+  width: 100%;
+  margin-top: 2rem
 `
 
 const links = [
@@ -73,6 +75,34 @@ const links = [
     hash: '#__next',
     link: '/info?section=acerca-de'
   }
+]
+
+const socials = [
+  {
+    icon: <Icon icon={facebook} />,
+    hash: '',
+    link: ''
+  },
+  {
+    icon: <Icon icon={twitter} />,
+    hash: '',
+    link: ''
+  },
+  {
+    icon: <Icon icon={youtube} />,
+    hash: '',
+    link: ''
+  },
+  {
+    icon: <Icon icon={instagram} />,
+    hash: '',
+    link: ''
+  },
+  {
+    icon: '@LegisCABA',
+    hash: '',
+    link: ''
+  },
 ]
 
 const FooterLink = ({ name, link, hash }) => {
@@ -110,7 +140,17 @@ const Footer = () => (
               hash={li.hash} />
           })}
         </Sections>
+        <Sections>
+          {socials.map((li, i) => {
+            return <FooterLink
+              key={i}
+              name={li.icon}
+              link={li.link}
+              hash={li.hash} />
+          })}
+        </Sections>        
       </Links>
+      © 2023 LEGISLATURA CIUDAD AUTONOMA DE BUENOS AIRES, DIRECCION: PERU 160, C1067AAD (CABA) / TEL: (011) 4338-3000
   </FooterWrapper>
 )
 

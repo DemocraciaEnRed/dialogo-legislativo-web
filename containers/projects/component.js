@@ -1,25 +1,34 @@
 import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import fetch from 'isomorphic-unfetch'
 import Section from '../section/component'
 import Card from '../../components/card/component'
 import TitleH2 from '../../elements/title-h2/component'
 import SubtitleH3 from '../../elements/subtitle-h3/component'
-import Button from '../../elements/button/component'
 import getConfig from 'next/config'
 import router, {withRouter} from 'next/router'
 import Masonry from 'react-masonry-component';
 import TagsSelect from '../../elements/tags-select/component.js'
 import WithDocumentTagsContext from '../../components/document-tags-context/component'
 import WithUserContext from '../../components/with-user-context/component'
-import Search from '../../elements/search/component'
+
 
 const { publicRuntimeConfig: { API_URL } } = getConfig()
 
 const masonryOptions = {
   transitionDuration: 0
 }
+
+const Options = styled.div`
+width:100%;
+display:flex;
+justify-content: flex-end;
+@media(max-width:700px){
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+ }
+`
 
 const OptionChoice = styled.div`
 display: inline-block;
@@ -45,9 +54,14 @@ background-color: #F1ECEA;
 
 const OptionsWrapper = styled.div`
 position:relative;
+display: flex;
 `
 
 const OptionsSection = styled.div`
+cursor: pointer
+background: #BDBDBD;
+border-radius: 10px;
+margin: 10px
 `
 
 const OptionsHeader = styled.div`
@@ -56,15 +70,7 @@ display:flex;
 justify-content: space-between;
 
 `
-const Options = styled.div`
-width:70%;
-display:flex;
-@media(max-width:700px){
-  width:100%;
-  flex-wrap: wrap;
-  justify-content: flex-end;
- }
-`
+
 const OptionsMenu = styled.div`
 background-color: #F1ECEA;
 display: ${(props) => props.projectState || props.projectTags || props.projectSort ? 'flex' : 'none'}; 
@@ -120,22 +126,6 @@ text-align: center;
 width: 100%;
 `
 
-const FilterButton = styled.button`
-margin-left:25px;
-border: none;
-border-radius:5px;
-padding: 10px 20px;
-font-size: 1.4rem;
-color: #FFF;
-background-color: var(--primary-color);
-font-family: var(--bold);
-cursor: pointer;
-@media(max-width:700px){
-  margin-top: 8px;
-  color: var(--primary-color);
-  background-color:#fff0;
- }
-`
 const Icon = styled.div`
   width: 18px;
   height: 15px;
@@ -162,22 +152,6 @@ animation: rotation 2s infinite linear;
   to {
     transform: rotate(359deg);
   }
-}
-`
-
-
-const Filters = styled.div`
-width:250px;
-background:white;
-position: absolute;
-right: 0px;
-top: 50px;
-z-index: 999;
-border-radius:5px
-box-shadow: 0px 3px 4px 0px #9999996b;
-@media(max-width:700px){
-  right: 0;
-  left: -185px;  
 }
 `
 
@@ -374,11 +348,8 @@ class Projects extends Component {
         <TitleH2>Iniciativas legislativas abiertas para la co-creacion</TitleH2>
         <SubtitleH3>Acá podes acceder a las iniciativas para leerlas, apoyarlas y hacer tus aportes. ¡Ayudanos a mejorarlas!</SubtitleH3>
         <Options>
-          <Search type='text' placeholder='Buscá por nombre de la Diputada o Diputado o propuesta' onInput={(e) => this.toggleSort('textFilter', e.target.value)} />
+          
           <OptionsWrapper>
-            <FilterButton onClick={this.handleShowFilters}>Filtrar <Icon icon='down-arrow.svg' /></FilterButton>
-            <Filters style={{ display: this.state.filterShow ? 'block' : 'none' }}>
-            <OptionLabel isTopTitle>Filtrar por:</OptionLabel>
               <OptionsSection>
                 <OptionsHeader onClick={() => this.toggleShowMenu('projectSort')}>
                   <div>
@@ -423,7 +394,6 @@ class Projects extends Component {
 
                 </OptionsMenu>
               </OptionsSection>
-            </Filters>
           </OptionsWrapper>
         </Options>
         {projects &&
