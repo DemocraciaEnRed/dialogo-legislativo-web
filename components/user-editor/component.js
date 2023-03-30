@@ -162,7 +162,7 @@ class UserEditor extends Component {
     let plugins = []
     if (this.props.withComments) plugins.push(ProjectTextComment({ onClick: this.showComments, isClosed: this.props.isClosed }))
     plugins.push(ProjectTextEdit({ id: this.props.id, field: 'articles', isAuthor: this.props.isAuthor }))
-    if (this.props.authContext.authenticated && !this.props.editMode && !this.props.isClosed) {
+    if (this.props.authContext.authenticated && !this.props.editMode && !this.props.isClosed && this.props.canAcceptComments) {
       plugins.push(ProjectTextCreateComment({ id: this.props.id, pushComment: this.pushComment }))
     }
     return (

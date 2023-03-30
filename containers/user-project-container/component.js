@@ -56,7 +56,7 @@ export default class extends Component {
   toggleAcceptComments = () => this.setState({ canAcceptComments: !this.state.canAcceptComments })
   setPublish = (isPublished) => this.setState({ isPublished: isPublished })
   setAcceptComments = (canAcceptComments) => this.setState({ canAcceptComments: canAcceptComments })
-
+  
   render() {
     const { project, section, fetchDocument, apoyarProyecto } = this.props
     const { withComments, isPublished, canAcceptComments } = this.state
@@ -109,6 +109,7 @@ export default class extends Component {
                 isAuthor={isAuthorOrAdmin}
                 editMode={this.state.editMode}
                 withComments={withComments}
+                canAcceptComments={project.document.acceptComments}
                 id={project.document._id}
                 isClosed={project.document.closed} />
             </Fragment>
