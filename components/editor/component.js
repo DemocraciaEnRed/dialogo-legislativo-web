@@ -145,7 +145,7 @@ class UserEditor extends Component {
         return false
     }
   }
-
+  
   render () {
     if (!this.state.value) return null
     return (
