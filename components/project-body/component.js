@@ -100,7 +100,7 @@ const ProjectBody = ({ project, isAdmin }) => (
         )
       }
     </ArticlesContext.Consumer>
-    <ProjectLinkArticulate closed={project.closed} id={project._id} />
+    <ProjectLinkArticulate closed={project.closed} acceptComments={project.acceptComments} id={project._id} />
   </ProjectBodyContainer>
 )
 

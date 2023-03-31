@@ -15,6 +15,7 @@ import ProjectSubtitle from '../../elements/project-subtitle/component'
 import ProjectEditMode from '../../elements/project-edit-mode/component'
 import ProjectHeaderVersion from '../../elements/project-header-version/component'
 import TogglePublish from '../../components/project-toggle-publish/component'
+import ToggleAcceptComments from '../../components/project-toggle-accept-comments/component'
 import ProjectHeaderLink from '../../elements/project-header-link/component'
 import ClosingDate from '../../elements/closing-date/component'
 import ArticlesCommentsCounter from '../../elements/articles-comments-counter/component'
@@ -101,7 +102,7 @@ font-family: var(--bold);
 margin-right:8px
 `
 
-const ProjectHeader = ({ project, userReaction, section, isPublished, isAuthor, setPublish, togglePublish, contextualCommentsCount, contributionsCount, contributorsCount, currentSection, withComments, apoyarProyecto }) => {
+const ProjectHeader = ({ project, userReaction, section, isPublished, canAcceptComments, isAuthor, setPublish, setAcceptComments, togglePublish, toggleAcceptComments, contextualCommentsCount, contributionsCount, contributorsCount, currentSection, withComments, apoyarProyecto }) => {
   const childSuportRef = useRef()
   const childSharedRef = useRef()
   // make a state for emoteCount
@@ -144,6 +145,9 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, isAuthor, 
               version={project.currentVersion.version}
             />
             <ProjectEditMode />
+            {isAuthor &&
+              <ToggleAcceptComments project={project} canAcceptComments={canAcceptComments} setAcceptComments={setAcceptComments} toggleAcceptComments={toggleAcceptComments} />
+            }
             {isAuthor &&
               <TogglePublish project={project} isPublished={isPublished} setPublish={setPublish} togglePublish={togglePublish} />
             }

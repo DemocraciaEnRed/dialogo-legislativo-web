@@ -28,6 +28,7 @@ export default class extends Component {
     selectedCommentsIds: [],
     editMode: false,
     isPublished: false,
+    canAcceptComments: false,
     projectFields: null
   }
 
@@ -52,11 +53,13 @@ export default class extends Component {
 
   toggleEditMode = () => this.setState(({ editMode }) => ({ editMode: !editMode }))
   togglePublish = () => this.setState({ isPublished: !this.state.isPublished })
+  toggleAcceptComments = () => this.setState({ canAcceptComments: !this.state.canAcceptComments })
   setPublish = (isPublished) => this.setState({ isPublished: isPublished })
-
+  setAcceptComments = (canAcceptComments) => this.setState({ canAcceptComments: canAcceptComments })
+  
   render() {
     const { project, section, fetchDocument, apoyarProyecto } = this.props
-    const { withComments, isPublished } = this.state
+    const { withComments, isPublished, canAcceptComments } = this.state
     if (!project || !project.document) return null
     const isAuthorOrAdmin = project.isAuthor || this.props.isAdmin
     return (
@@ -81,6 +84,9 @@ export default class extends Component {
             isPublished={isPublished}
             setPublish={this.setPublish}
             togglePublish={this.togglePublish}
+            canAcceptComments={canAcceptComments}
+            setAcceptComments={this.setAcceptComments}
+            toggleAcceptComments={this.toggleAcceptComments}
             isAuthor={isAuthorOrAdmin}
             contributorsCount={project.contributorsCount}
             contextualCommentsCount={project.contextualCommentsCount}
@@ -104,6 +110,7 @@ export default class extends Component {
                 isAuthor={isAuthorOrAdmin}
                 editMode={this.state.editMode}
                 withComments={withComments}
+                canAcceptComments={project.document.acceptComments}
                 id={project.document._id}
                 isClosed={project.document.closed} />
             </Fragment>
