@@ -76,6 +76,7 @@ export default class extends Component {
         }}>
           <ProjectHeader
             project={project.document}
+            userReaction={project.userReaction}
             section={section}
             isPublished={isPublished}
             setPublish={this.setPublish}
@@ -87,7 +88,7 @@ export default class extends Component {
             currentSection={this.props.section}
             withComments={withComments}
             apoyarProyecto={apoyarProyecto}
-             />
+            />
 
           {this.props.section === '/propuesta' &&
             <Fragment>

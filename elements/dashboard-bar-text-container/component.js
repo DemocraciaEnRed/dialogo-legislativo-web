@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 
 const DashboardBarTextContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  
   margin-top: 1rem;
 `
 
