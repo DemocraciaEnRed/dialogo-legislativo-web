@@ -166,7 +166,7 @@ class ProjectComments extends Component {
     return (
       <StyledProjectComments>
         <StyledTitle>Comentarios</StyledTitle>
-        <StyledSubtitle>Espacio abierto para comentarios generales.</StyledSubtitle>
+        <StyledSubtitle>{project.acceptComments ? 'Espacio abierto para comentarios generales.' : 'Esta iniciativa no admite comentarios'}</StyledSubtitle>
         {comments && comments.map((comment) => (
           <FundationCommentCard
             canDelete={this.canDelete(comment)}
@@ -176,7 +176,7 @@ class ProjectComments extends Component {
             project={project}
             attachReply={this.attachReply} />
         ))}
-        {!project.closed &&
+        {!project.closed && project.acceptComments &&
           <FundationCommentForm
             authenticated={authContext.authenticated}
             handleSubmit={this.handleSubmit}
