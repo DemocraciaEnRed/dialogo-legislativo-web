@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import Icon from 'react-icons-kit'
@@ -27,6 +27,7 @@ import ModeBar from '../../components/mode-bar/component'
 import ModeButton from '../../elements/mode-button/component'
 import ModeBarLinkButton from '../../elements/mode-bar-link-button/component'
 import ModeBarApoyarButton from '../../elements/mode-bar-apoyar-button/component'
+import ModeBarReactButton from '../../elements/mode-bar-react-button/component'
 import ModeBarSharedButton from '../../elements/mode-bar-shared-button/component'
 import ProjectMobileTools from "../project-mobile-tools/component"
 import ProgressBar from '../../elements/progress-bar/component'
@@ -101,15 +102,23 @@ font-family: var(--bold);
 margin-right:8px
 `
 
-const ProjectHeader = ({ project, section, isPublished, canAcceptComments, isAuthor, setPublish, setAcceptComments, togglePublish, toggleAcceptComments, contextualCommentsCount, contributionsCount, contributorsCount, currentSection, withComments, apoyarProyecto }) => {
+const ProjectHeader = ({ project, userReaction, section, isPublished, canAcceptComments, isAuthor, setPublish, setAcceptComments, togglePublish, toggleAcceptComments, contextualCommentsCount, contributionsCount, contributorsCount, currentSection, withComments, apoyarProyecto }) => {
   const childSuportRef = useRef()
   const childSharedRef = useRef()
+  // make a state for emoteCount
+  const [emoteCount, setEmoteCount] = useState(project.emoteCount)
+
   const toogleform = (element)=> {
     if (element.apoyarProyecto) {
       childSharedRef.current.close()
     } else {
       childSuportRef.current.close()
     }
+  }
+
+  const updateEmoteCount = (emoteCount) => {
+    console.log('emoteCount', emoteCount)
+    setEmoteCount(emoteCount)
   }
 
   return(
@@ -130,7 +139,7 @@ const ProjectHeader = ({ project, section, isPublished, canAcceptComments, isAut
               name={project.author.fullname}
               party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''} />
             <ClosingDate closingDate={project.currentVersion.content.closingDate} closed={project.closed} creationDate={project.currentVersion.createdAt} />
-            <ArticlesCommentsCounter commentsCount={project.commentsCount} apoyosCount={project.apoyosCount} project={project._id} />
+            <ArticlesCommentsCounter commentsCount={project.commentsCount} apoyosCount={project.apoyosCount} emoteCount={emoteCount} project={project._id} />
             <ProjectHeaderVersion
               project={project._id}
               version={project.currentVersion.version}
@@ -161,6 +170,7 @@ const ProjectHeader = ({ project, section, isPublished, canAcceptComments, isAut
           {project.closed &&
             <ClosedProposal
               contributors={contributorsCount}
+              emoteCount={emoteCount}
               contributions={contributionsCount}
               contextualComments={contextualCommentsCount} />
           }
@@ -179,7 +189,10 @@ const ProjectHeader = ({ project, section, isPublished, canAcceptComments, isAut
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}
               <ModeBarSharedButton ref={childSharedRef} project={project} toogleForm={toogleform}/>
-              <ModeBarApoyarButton ref={childSuportRef} project={project} apoyarProyecto={apoyarProyecto} toogleForm={toogleform} />
+              {/* <ModeBarApoyarButton ref={childSuportRef} project={project} apoyarProyecto={apoyarProyecto} toogleForm={toogleform} /> */}
+              {!project.closed &&
+              <ModeBarReactButton project={project} userReaction={userReaction} updateEmoteCount={updateEmoteCount} />
+              }
             </SocialSection>
           </ModeBar>
         }
@@ -198,8 +211,10 @@ const ProjectHeader = ({ project, section, isPublished, canAcceptComments, isAut
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}
               <ModeBarSharedButton project={project} />
-              <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} />
-
+              {/* <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} /> */}
+              {!project.closed &&
+              <ModeBarReactButton project={project} userReaction={userReaction} updateEmoteCount={updateEmoteCount} />
+              }
             </SocialSection>
           </ModeBar>
         }
@@ -222,7 +237,10 @@ const ProjectHeader = ({ project, section, isPublished, canAcceptComments, isAut
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}
               <ModeBarSharedButton project={project} />
-              <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} />
+              {/* <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} /> */}
+              {!project.closed &&
+              <ModeBarReactButton project={project} userReaction={userReaction} updateEmoteCount={updateEmoteCount} />
+              }
             </SocialSection>
           </ModeBar>
         }

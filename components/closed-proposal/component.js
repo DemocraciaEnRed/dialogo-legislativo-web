@@ -20,13 +20,45 @@ const ClosedProposalData = styled.div`
   // }
 `
 
-export default ({ contributors, contributions, contextualComments }) => (
+export default ({ contributors, contributions, emoteCount, contextualComments }) => (
   <ClosedProposalWrapper>
     <ClosedProposalMessage>Agradecemos a cada uno de los ciudadanos que compartieron sus aportes y comentarios a esta propuesta de ley. A continuación podrá ver los detalles y el resumen de la co-creación de esta propuesta de ley.</ClosedProposalMessage>
     <ClosedProposalData>
       <DashboardBarItem>
         <DashboardBarTextContainer>
-          <ActivityIcon img={'/static/assets/group-3.svg'} small={true} />
+          <ActivityIcon img={'/static/assets/thumb-up.svg'} small={true} />
+          <BarActivitySubtitle number={(emoteCount && emoteCount.likes) || 0}>
+            Me gusta
+          </BarActivitySubtitle>
+        </DashboardBarTextContainer>
+      </DashboardBarItem>
+      <DashboardBarItem>
+        <DashboardBarTextContainer>
+          <ActivityIcon img={'/static/assets/heart.svg'} small={true} />
+          <BarActivitySubtitle number={(emoteCount && emoteCount.loves) || 0}>
+            Me encanta
+          </BarActivitySubtitle>
+        </DashboardBarTextContainer>
+      </DashboardBarItem>
+      <DashboardBarItem>
+        <DashboardBarTextContainer>
+          <ActivityIcon img={'/static/assets/lightbulb.svg'} small={true} />
+          <BarActivitySubtitle number={(emoteCount && emoteCount.improve) || 0}>
+            Lo mejoraria
+          </BarActivitySubtitle>
+        </DashboardBarTextContainer>
+      </DashboardBarItem>
+      <DashboardBarItem>
+        <DashboardBarTextContainer>
+          <ActivityIcon img={'/static/assets/thumb-down.svg'} small={true} />
+          <BarActivitySubtitle number={(emoteCount && emoteCount.dislike) || 0}>
+            Me disgusta
+          </BarActivitySubtitle>
+        </DashboardBarTextContainer>
+      </DashboardBarItem>
+      <DashboardBarItem>
+        <DashboardBarTextContainer>
+          <ActivityIcon img={'/static/assets/pencil-black.svg'} small={true} />
           <BarActivitySubtitle number={contextualComments}>
             Aportes
           </BarActivitySubtitle>
@@ -34,7 +66,7 @@ export default ({ contributors, contributions, contextualComments }) => (
       </DashboardBarItem>
       <DashboardBarItem>
         <DashboardBarTextContainer>
-          <ActivityIcon img={'/static/assets/citizen-icon.svg'} small={true} />
+          <ActivityIcon img={'/static/assets/user.svg'} small={true} />
           <BarActivitySubtitle number={contributors}>
             Participantes
           </BarActivitySubtitle>
@@ -44,7 +76,7 @@ export default ({ contributors, contributions, contextualComments }) => (
         (contributions) > 0 &&
         <DashboardBarItem>
           <DashboardBarTextContainer>
-            <ActivityIcon img={'/static/assets/cha-rect-star.svg'} small={true} />
+            <ActivityIcon img={'/static/assets/apoyar-icon-azul.svg'} small={true} />
             <BarActivitySubtitle number={contributions}>
               Aportes destacados
             </BarActivitySubtitle>

@@ -3,20 +3,20 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyledBarSubtitle = styled.div`
-  height:2.9rem;
+  // height:2.9rem;
   max-width:25rem;
 `
 const Span = styled.span`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: var(--black);  
   line-height: 1.13rem;
-  color: #ef885d;
+  color: var(--primary-color);
   margin:0;
 `
 const ItemStyle = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: var(--medium);
-  color: var(--primary-color); 
+  color: #000; 
   margin-bottom: 0.5rem;
 `
 const BarActivitySubtitle = ({ number, children }) => (
