@@ -186,7 +186,9 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, isAuthor, 
               </SharerButton> */}
               <ModeBarSharedButton ref={childSharedRef} project={project} toogleForm={toogleform}/>
               {/* <ModeBarApoyarButton ref={childSuportRef} project={project} apoyarProyecto={apoyarProyecto} toogleForm={toogleform} /> */}
+              {!project.closed &&
               <ModeBarReactButton project={project} userReaction={userReaction} updateEmoteCount={updateEmoteCount} />
+              }
             </SocialSection>
           </ModeBar>
         }
@@ -206,7 +208,9 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, isAuthor, 
               </SharerButton> */}
               <ModeBarSharedButton project={project} />
               {/* <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} /> */}
+              {!project.closed &&
               <ModeBarReactButton project={project} userReaction={userReaction} updateEmoteCount={updateEmoteCount} />
+              }
             </SocialSection>
           </ModeBar>
         }
@@ -229,7 +233,10 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, isAuthor, 
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}
               <ModeBarSharedButton project={project} />
-              <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} />
+              {/* <ModeBarApoyarButton project={project} apoyarProyecto={apoyarProyecto} /> */}
+              {!project.closed &&
+              <ModeBarReactButton project={project} userReaction={userReaction} updateEmoteCount={updateEmoteCount} />
+              }
             </SocialSection>
           </ModeBar>
         }
