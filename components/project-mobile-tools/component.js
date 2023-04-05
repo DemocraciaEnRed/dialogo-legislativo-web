@@ -29,7 +29,7 @@ const Row = styled.div`
 
 const ItemTitle = styled.div`
   font-family: var(--bold);
-  color:#203340;
+  color:var(--black);
   margin-top: 8px;
 `
 

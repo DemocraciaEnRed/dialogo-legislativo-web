@@ -8,7 +8,7 @@ export default (props) => (
     <style jsx>{`
       button {
         border: 0;
-        background-color: #203340;
+        background-color: var(--black);
         color: #FFF;
       }
     `}</style>

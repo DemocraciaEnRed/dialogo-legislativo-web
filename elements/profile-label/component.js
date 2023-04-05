@@ -5,7 +5,7 @@ const ProfileLabel = styled.label`
   flex-direction: column;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  color: #203340;
+  color: var(--black);
   margin: 19px 0;
 `
 

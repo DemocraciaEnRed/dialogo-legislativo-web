@@ -87,7 +87,7 @@ const StyledEditorWrapper = styled.div`
     span {
       font-size: 1.6rem;
       line-height: 2.4rem;
-      color: #203340;
+      color: var(--black);
       padding: 6.5px 0px;
     }
   }

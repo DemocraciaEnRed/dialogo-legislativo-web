@@ -87,7 +87,7 @@ const Wrapper = styled.div`
 const Label = styled.div`
   font-size:14px;
   font-family: var(--bold);
-  color:#203340;
+  color:var(--black);
   margin: 4px 0 0px;
 `
 const ToggleClick = styled.span`

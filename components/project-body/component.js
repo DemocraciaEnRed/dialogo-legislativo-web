@@ -27,7 +27,7 @@ const P = styled.p`
   font-size: 18px;
   line-height: 1.94;
   padding-bottom:3rem;
-  color: #203340;
+  color: var(--black);
   @media (max-width: 700px) {
     // font-size: 18px;
     // line-height: 1.3;
@@ -48,7 +48,7 @@ const BoldP = styled.p`
   font-size: 18px;
   line-height: 1.94;
   padding-bottom:3rem;
-  color: #203340;
+  color: var(--black);
   font-family:var(--bold);
 `
 

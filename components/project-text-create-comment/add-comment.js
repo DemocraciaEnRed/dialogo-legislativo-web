@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const StyledAddComment = styled.button`
   position: absolute;
   width: 208px;
-  background-color: #203340;
+  background-color: var(--black);
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   margin: 0 0 10px 0;
@@ -20,7 +20,7 @@ const StyledAddComment = styled.button`
     display: block;
     position: absolute;
     border-top: 5px solid;
-    border-top-color: #203340;
+    border-top-color: var(--black);
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
     bottom: -5px;

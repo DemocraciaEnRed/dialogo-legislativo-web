@@ -547,7 +547,7 @@ injectGlobal`
   background-color: #ffffff;
   font-size: 1.4rem;
   line-height: 1.5rem;
-  color: #203340;
+  color: var(--black);
   margin-top: 10px;
   padding: 14px;
 }
@@ -781,7 +781,7 @@ const InputField = styled.input`
   background-color: #ffffff;
   font-size: 1.4rem;
   line-height: 1.5rem;
-  color: #203340;
+  color: var(--black);
   margin-top: 10px;
   padding: 14px;
   &:read-only,
@@ -797,7 +797,7 @@ const SelectField = styled.select`
   background-color: #ffffff;
   font-size: 1.4rem;
   line-height: 1.5rem;
-  color: #203340;
+  color: var(--black);
 `
 
 
@@ -808,7 +808,7 @@ const TextareaField = styled.textarea`
   background-color: #ffffff;
   font-size: 1.4rem;
   line-height: 2.1rem;
-  color: #203340;
+  color: var(--black);
   margin-top: 10px;
   padding: 14px;
   &:read-only,
@@ -860,7 +860,7 @@ const LabelOptionSource = styled.label`
   text-transform:capitalize;
   display:inline-block;
   background-color:${props => props.active && 'var(--primary-color)'};
-  color:${props => props.active ? '#fff' : '#203340'};
+  color:${props => props.active ? '#fff' : 'var(--black)'};
   &:last-child{
     border-right:solid 1px #dae1e7;
   }

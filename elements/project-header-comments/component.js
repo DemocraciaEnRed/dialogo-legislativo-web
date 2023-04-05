@@ -23,7 +23,7 @@ const ItemStyle = styled.p`
   height: 40px;
   font-size: 1.4rem;
   line-height: 1.43;
-  color: #203340;
+  color: var(--black);
   margin:0;
 
 `

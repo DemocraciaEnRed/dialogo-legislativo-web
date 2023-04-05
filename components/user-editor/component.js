@@ -37,7 +37,7 @@ const StyledEditorWrapper = styled.div`
       @media (max-width: 700px) {
       // line-height: 1.89;
       }
-      color: #203340;
+      color: var(--black);
       // padding: 6.5px 0px;
       padding: 4.5px 0px;
     }

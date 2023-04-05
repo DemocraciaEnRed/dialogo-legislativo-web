@@ -13,7 +13,7 @@ display:flex;
 flex-direction: column;
     font-size: 1.4rem;
     line-height: 2.5rem;
-    color: #203340;
+    color: var(--black);
     margin: 19px 0;
 
 `
@@ -25,7 +25,7 @@ width: 100%;
     background-color: #ffffff;
     font-size: 1.4rem;
     line-height: 1.5rem;
-    color: #203340;
+    color: var(--black);
     margin-top: 10px;
     padding: 14px;
 `

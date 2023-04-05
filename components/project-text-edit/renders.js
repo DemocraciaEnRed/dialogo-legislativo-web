@@ -10,14 +10,14 @@ const nodes = {
     font-stretch: normal;
     line-height: 1.42;
     letter-spacing: normal;
-    color: #203340;
+    color: var(--black);
   `,
 
   paragraph: styled.p`
     font-size: 18px;
     line-height: 1.94;
     padding-bottom: 3rem;
-    color: #203340;
+    color: var(--black);
   `,
 
   'ordered-list': styled.ol``,
@@ -28,7 +28,7 @@ const nodes = {
     font-size: 18px;
     line-height: 1.94;
     padding-bottom: 3rem;
-    color: #203340;
+    color: var(--black);
   `
 }
 

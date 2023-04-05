@@ -27,7 +27,7 @@ const Row = styled.div`
 const ItemTitle = styled.div`
   font-size:16px;
   font-family: var(--bold);
-  color:#203340;
+  color:var(--black);
   margin-top: 8px;
 `
 const ProjectsTableRow = styled.tr`

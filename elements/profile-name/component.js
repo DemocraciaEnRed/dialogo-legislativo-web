@@ -5,7 +5,7 @@ const ProfileName = styled.p`
   font-family: var(--bold);
   line-height: 1.63rem;
   text-align: center;
-  color: #203340;
+  color: var(--black);
   border: none;
   margin-bottom: 30px;
   margin-top: 10px;

@@ -5,7 +5,7 @@ const FundationFormLabel = styled.label`
   flex-direction: column;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  color: #203340;
+  color: var(--black);
 `
 
 export default FundationFormLabel

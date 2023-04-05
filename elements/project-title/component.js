@@ -6,7 +6,7 @@ const ProjectTitle = styled.h1`
   font-size: 4.2rem;
   font-family: var(--regular);
   line-height: 4.5rem;
-  color: #203340;
+  color: var(--black);
   letter-spacing: -2px;
   width: 100%;
   @media(max-width:700px){

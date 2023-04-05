@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const StyledCreationDate = styled.span`
   font-size: 1.4rem;
-  color: #203340;
+  color: var(--black);
   margin-top: 0.4rem;
 `
 

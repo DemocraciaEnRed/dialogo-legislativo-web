@@ -15,7 +15,7 @@ const StyledEditorWrapper = styled.div`
     span {
       font-size: 1.8rem;
       line-height: 1.89;
-      color: #203340;
+      color: var(--black);
     }
   }
 `
@@ -50,7 +50,7 @@ const P = styled.p`
   font-size: 18px;
   line-height: 1.94;
   padding-bottom:3rem;
-  color: #203340;`
+  color: var(--black);`
 
 export default class extends Component {
   state = {

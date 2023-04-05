@@ -7,7 +7,7 @@ const WrapperDiv = styled.div`
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 2.5rem;
-  color: #203340;
+  color: var(--black);
   /*padding: 0 14px;*/
   padding: 0;
   display: flex;

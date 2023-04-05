@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const StyledProfileResume = styled.div`
   font-size: 1.8rem;
   line-height: 1.94;
-  color: #203340;
+  color: var(--black);
   margin-top:4rem;
 `
 const ProfileResume = ({ resume }) => (

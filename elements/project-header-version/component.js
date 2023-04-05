@@ -17,7 +17,7 @@ background-color: #EFEFEF;
 const ProjectHeaderVersionTitle = styled.p`
   font-size:14px;
   font-family: var(--bold);
-  color:#203340;
+  color:var(--black);
   margin: 4px 0 6px;
   // margin-top: 0.4rem;
   // margin-bottom: 1rem;

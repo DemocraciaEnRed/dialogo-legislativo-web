@@ -8,7 +8,7 @@ export default ({ onMarkClick, type, children }) => (
     <style jsx>{`
       .style-button {
         border: 0;
-        background-color: #203340;
+        background-color: var(--black);
         color: #FFF;
       }
     `}</style>

@@ -5,7 +5,7 @@ const StyledTitleMark = styled.h2`
   font-size: 2rem;
   font-family: var(--bold);
   line-height: 1.89;
-  color: #203340;
+  color: var(--black);
   margin-top: 30px;
   margin-bottom: 30px;
 `

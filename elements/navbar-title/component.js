@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const NavBarTitle = styled.div`
  > a {
    font-size: 3rem;
-   color: #203340;
+   color: var(--black);
    text-decoration: none; 
  }
  &&& span {
