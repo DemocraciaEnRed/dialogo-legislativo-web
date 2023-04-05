@@ -42,6 +42,14 @@ const ClosingDate = styled.div`
   letter-spacing: .5px;
 
 `
+const CreationDate = styled.div`
+  font-size:12px;
+  color: #7e7e7e;
+  margin-top: 5px;
+  letter-spacing: .5px;
+
+`
+
 
 const TextWrapper = styled.div`
 margin-top: 2rem;
@@ -64,7 +72,7 @@ const formatDate = (createdAt) => {
   return (createdAt.substring(0, 10).split('-').reverse().join('/'))
 }
 
-const CardHeaderContent = ({ hasImage, authorId, tagTitle, title, userId, name, party, closingDate }) => (
+const CardHeaderContent = ({ hasImage, authorId, tagTitle, title, userId, name, party, closingDate, creationDate }) => (
   <Wrapper hasImage={hasImage}>
     <UserAvatar
       userId={userId}
@@ -79,6 +87,7 @@ const CardHeaderContent = ({ hasImage, authorId, tagTitle, title, userId, name, 
       }
       <Title>{title} </Title>
       <ClosingDate>Fecha de cierre: {formatDate(closingDate)}</ClosingDate>
+      <CreationDate>Fecha de creación: {formatDate(creationDate)}</CreationDate>
 
     </TextWrapper>
   </Wrapper>

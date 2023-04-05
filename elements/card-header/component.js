@@ -49,6 +49,7 @@ const CardHeader = ({ project, img, published }) => (
       name={project.author.fullname}
       // hasImage={!!project.currentVersion.content.imageCover}
       closingDate={project.currentVersion.content.closingDate}
+      creationDate={project.currentVersion.createdAt}
       hasImage={project.currentVersion.content.tags && project.currentVersion.content.tags.length > 0}
       party={project.author.fields && project.author.fields.party ? project.author.fields.party : ''} />
   </Wrapper>
