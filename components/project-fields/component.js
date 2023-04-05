@@ -1133,14 +1133,14 @@ class ProjectFields extends Component {
             value='youtube' 
             type={'radio'} />
               <LabelOptionSource active={this.state.videoSource === 'youtube'} for='youtube'>Youtube</LabelOptionSource>
-          <OptionSourceVideo 
+          {/* <OptionSourceVideo 
             onChange={this.handleVideoSource} 
             checked={this.state.videoSource === 'hcdn'}    
             name='optionSource' 
             id='hcdn' 
             value='hcdn' 
             type={'radio'} />
-              <LabelOptionSource active={this.state.videoSource === 'hcdn'} for='hcdn'>camara de diputados</LabelOptionSource>
+              <LabelOptionSource active={this.state.videoSource === 'hcdn'} for='hcdn'>legislatura</LabelOptionSource> */}
         </VideoSource>
         </ProfileLabel>
         { this.state.videoSource === 'hcdn' && <ProfileLabel>
