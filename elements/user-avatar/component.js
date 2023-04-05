@@ -69,6 +69,9 @@ const IconWrapper = styled.div`
 
 const UserAvatar = ({ projectView, userId, name, party, badge,cardUser }) => (
   <Wrapper projectView={projectView}>
+    <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
+      <Avatar projectView={projectView} userId={userId} />
+    </Link>    
     <TextWrapper>
       <Link href={{ pathname: '/userprofile', query: { id: userId } }}>
         <Name>{name}</Name>
