@@ -178,7 +178,7 @@ class UserEditor extends Component {
             updateComments={this.fetchComments}
             closeCommentsGrid={this.closeCommentsGrid} />
         }
-        { !this.props.isClosed &&
+        { !this.props.isClosed && this.props.canAcceptComments &&
           <ArticlesSubtitle authenticated={this.props.authContext.authenticated} editMode={this.props.editMode} />
         }
         <EditorTitle>Artículos de la propuesta</EditorTitle>
