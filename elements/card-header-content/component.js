@@ -44,6 +44,7 @@ const ClosingDate = styled.div`
 `
 
 const TextWrapper = styled.div`
+margin-top: 2rem;
 @media (max-width:700px){
   margin-left:65px;
 }
@@ -70,7 +71,8 @@ const CardHeaderContent = ({ hasImage, authorId, tagTitle, title, userId, name, 
       name={name}
       party={party}
       authorId={authorId} />
-    <HrWrapper />
+    {/* <HrWrapper /> */}
+    {/* <br /> */}
     <TextWrapper>
       { tagTitle &&
         <TagTitle>{tagTitle}</TagTitle>
