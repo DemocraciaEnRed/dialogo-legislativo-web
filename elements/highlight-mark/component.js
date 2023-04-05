@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledHighlightMark = styled.span`
-  background-color: #e3effa;
+  background-color: var(--secondary-color);
 `
 
 const HighlightMark = (props) => (

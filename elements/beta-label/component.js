@@ -7,7 +7,7 @@ const Label = styled.span`
   width: 95px;
   height: 20px;
   border-radius: 4px;
-  background-color: #e3effa;
+  background-color: var(--secondary-color);
   font-size: 1.0rem;
   font-weight: 500;
   color: #4a5d68;
