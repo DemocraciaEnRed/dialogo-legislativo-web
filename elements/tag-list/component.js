@@ -15,7 +15,7 @@ flex-wrap: wrap;
 const Tag = styled.div`
 margin-bottom: 5px;
 margin-right: 5px;
-background:#B6D5F2;
+background:var(--secondary-color);
 color: #4C4C4E;
 border-radius:5px;
 font-weight: 600;
