@@ -38,7 +38,7 @@ const formatDate = (createdAt) => {
 
 const ProjectSubtitle = ({ project, version, createdAt, commentsCount}) => (
   <SubtitleContainer>
-    Fecha de creación: {formatDate(createdAt)} - Versión { version }<HideInMobile>&nbsp;- Aportes hechos: {commentsCount}</HideInMobile>
+    Fecha de creación: {formatDate(createdAt, true)} - Versión { version }<HideInMobile>&nbsp;- Aportes hechos: {commentsCount}</HideInMobile>
     </SubtitleContainer>
 )
 
