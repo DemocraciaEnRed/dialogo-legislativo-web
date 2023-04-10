@@ -22,7 +22,7 @@ const ClosedProposalData = styled.div`
 
 export default ({ contributors, contributions, emoteCount, contextualComments }) => (
   <ClosedProposalWrapper>
-    <ClosedProposalMessage>Agradecemos a cada uno de los ciudadanos que compartieron sus aportes y comentarios a esta propuesta de ley. A continuación podrá ver los detalles y el resumen de la co-creación de esta propuesta de ley.</ClosedProposalMessage>
+    <ClosedProposalMessage>Agradecemos a cada uno de los ciudadanos que compartieron sus aportes y comentarios a esta propuesta de ley. A continuación podrá ver los detalles y el resumen de la cocreación de esta propuesta de ley.</ClosedProposalMessage>
     <ClosedProposalData>
       <DashboardBarItem>
         <DashboardBarTextContainer>
