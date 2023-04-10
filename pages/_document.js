@@ -132,7 +132,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Portal de Diálogo Legislativo - H. Cámara de Diputados de la Nación</title>
+          <title>Portal Diálogo Legislativo - H. Cámara de Diputados de la Nación</title>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta charSet='utf-8' />
           {this.props.styleTags}

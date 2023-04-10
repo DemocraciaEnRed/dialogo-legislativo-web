@@ -345,7 +345,7 @@ class Projects extends Component {
     const currentTag = query.tag && tags.find(tag => tag.value === query.tag).label
     return (
       <Section id='projects' noMargin>
-        <TitleH2>Iniciativas legislativas abiertas para la co-creacion</TitleH2>
+        <TitleH2>Iniciativas legislativas abiertas para la cocreación</TitleH2>
         <SubtitleH3>Acá podes acceder a las iniciativas para leerlas, apoyarlas y hacer tus aportes. ¡Ayudanos a mejorarlas!</SubtitleH3>
         <Options>
           
