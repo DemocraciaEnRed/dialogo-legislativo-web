@@ -35,7 +35,7 @@ export default () => (
         ¿Cuál es el plazo para realizar comentarios?
       </StaticInfoBold>
       <StaticInfoP>
-        El plazo para realizar comentarios es diferente en cada iniciativa y estará indicada al inicio de la propuesta. Cada diputado/a decide cuándo la iniciativa es puesta a disposición para recibir comentarios, y define el plazo de cierre.
+        El plazo para realizar comentarios es diferente en cada iniciativa y estará indicada al inicio de la iniciativa. Cada diputado/a decide cuándo la iniciativa es puesta a disposición para recibir comentarios, y define el plazo de cierre.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>
@@ -43,7 +43,7 @@ export default () => (
         ¿Cómo puedo saber qué pasó con la iniciativa, una vez finalizado el plazo para hacer aportes?
       </StaticInfoBold>
       <StaticInfoP>
-        Una vez finalizado el plazo, recibirás una notificación con la versión final de la propuesta. Podrás ingresar al sitio para ver los resultados, con la cantidad de aportes tenidos en consideración y la cantidad de comentarios realizados.
+        Una vez finalizado el plazo, recibirás una notificación con la versión final de la iniciativa. Podrás ingresar al sitio para ver los resultados, con la cantidad de aportes tenidos en consideración y la cantidad de comentarios realizados.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>

@@ -509,7 +509,7 @@ class MyProjects extends Component {
           showAlert: true,
           isLoading: false,
           alertStatus: 'error',
-          alertText: 'Ocurrió un error al crear una nueva propuesta (¿Limite alcanzado?)'
+          alertText: 'Ocurrió un error al crear una nueva iniciativa (¿Limite alcanzado?)'
         })
         console.error(err)
       })
@@ -626,7 +626,7 @@ class MyProjects extends Component {
                 {
                   isLoading
                     ? <ButtonTableDisabled float='left'><Icon icon={clockO} size={20} />&nbsp;&nbsp;Creando nuevo proyecto... Espere unos segundos...</ButtonTableDisabled>
-                    : <ButtonTable onClick={this.createProject} float='left'><Icon icon={plus} size={20} />&nbsp;&nbsp;Agregar una nueva propuesta</ButtonTable>
+                    : <ButtonTable onClick={this.createProject} float='left'><Icon icon={plus} size={20} />&nbsp;&nbsp;Agregar una nueva iniciativa</ButtonTable>
                 }
                 <ButtonTable
                   onClick={hasProjects && this.downloadXls}

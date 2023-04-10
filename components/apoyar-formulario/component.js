@@ -214,7 +214,7 @@ class ApoyarFormulario extends Component {
             {project.apoyosCount > 1 &&
               <Fragment>
                 <ApoyandoPersonasSpan>{ apoyosMinusOne } {apoyosMinusOne == 1 ? 'persona' : 'personas'} y vos</ApoyandoPersonasSpan>
-                <span>Están apoyando la propuesta</span>
+                <span>Están apoyando la iniciativa</span>
               </Fragment>
             }
           </ApoyandoGroup>
@@ -227,7 +227,7 @@ class ApoyarFormulario extends Component {
         }
         { !hasAnonApoyado && !project.userIsApoyado &&
           <Fragment>
-            <ApoyosSpan>{ project.apoyosCount || 0 } personas</ApoyosSpan> están apoyando la propuesta<br />
+            <ApoyosSpan>{ project.apoyosCount || 0 } personas</ApoyosSpan> están apoyando la iniciativa<br />
             ¿Querés apoyarla también?
             { !authenticated &&
               <Fragment>
@@ -251,7 +251,7 @@ class ApoyarFormulario extends Component {
               </Fragment>
             }
             <ErrorSpan>{this.state.formError}</ErrorSpan>
-            <ApoyarButton><img src={`${'/static/assets/apoyar-icon.svg'}`} />Quiero apoyar la propuesta</ApoyarButton>
+            <ApoyarButton><img src={`${'/static/assets/apoyar-icon.svg'}`} />Quiero apoyar la iniciativa</ApoyarButton>
           </Fragment>
         }
       </Container>

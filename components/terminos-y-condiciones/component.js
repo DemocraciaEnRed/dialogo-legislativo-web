@@ -179,7 +179,7 @@ export default () => (
           10. Política de privacidad
           </StaticInfoBold>
           <StaticInfoP>
-          La recolección y tratamiento de los datos personales tiene fines identificatorios para conocer más sobre el uso de la plataforma, para mejorar la propuesta.
+          La recolección y tratamiento de los datos personales tiene fines identificatorios para conocer más sobre el uso de la plataforma, para mejorar la iniciativa.
           </StaticInfoP>
           <StaticInfoP>
           La LCABA no venderá, cederá y/o transferirá a ninguna otra persona ni organismo los datos personales de los usuarios que se registren. El deber de secreto podrá ser relevado por resolución judicial cuando medien razones fundadas relativas a la seguridad pública, la defensa nacional o salud pública, conforme al artículo 16 de la ley Nº 1845 y sus normas modificatorias y complementarias.

@@ -45,7 +45,7 @@ export default () => (
         <li>Realizar aportes específicos seleccionando una parte específica del texto y haciendo un aporte particular.</li>
       </StaticInfoOl>
       <StaticInfoP>
-      En el caso de los comentarios generales y específicos, solo podrán hacerse en aquellas iniciativas donde dicha función se encuentre habilitada por el/la diputado/a. Las y los diputados/as analizarán los aportes. En la medida en se realicen cambios a la propuesta original se generarán nuevas versiones de la propuesta. Así, las y los usuarios cuyos aportes fueran incorporados, serán colaboradores en la redacción de la propuesta final. Para más detalles sobre las funcionalidades básicas de esta plataforma consulte el Manual de usuario.
+      En el caso de los comentarios generales y específicos, solo podrán hacerse en aquellas iniciativas donde dicha función se encuentre habilitada por el/la diputado/a. Las y los diputados/as analizarán los aportes. En la medida en se realicen cambios a la iniciativa original se generarán nuevas versiones de la iniciativa. Así, las y los usuarios cuyos aportes fueran incorporados, serán colaboradores en la redacción de la iniciativa final. Para más detalles sobre las funcionalidades básicas de esta plataforma consulte el Manual de usuario.
       </StaticInfoP>
 
     </ComoParticiparWrapper>
