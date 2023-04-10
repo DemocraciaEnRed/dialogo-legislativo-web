@@ -68,8 +68,13 @@ border-top:1px solid #4C4C4E;
 
 const croppedTitle = (title) => title.slice(0, 42).concat('...')
 
-const formatDate = (createdAt) => {
-  return (createdAt.substring(0, 10).split('-').reverse().join('/'))
+const formatDate = (createdAt, hour=false) => {
+  let text = (createdAt.substring(0, 10).split('-').reverse().join('/'))
+  if (hour) {
+    // 2023-03-30T15:39:02.674Z
+    text += " " + (createdAt.substring(11, 16))
+  }
+  return text
 }
 
 const CardHeaderContent = ({ hasImage, authorId, tagTitle, title, userId, name, party, closingDate, creationDate }) => (
@@ -87,7 +92,7 @@ const CardHeaderContent = ({ hasImage, authorId, tagTitle, title, userId, name, 
       }
       <Title>{title} </Title>
       <ClosingDate>Fecha de cierre: {formatDate(closingDate)}</ClosingDate>
-      <CreationDate>Fecha de creación: {formatDate(creationDate)}</CreationDate>
+      <CreationDate>Fecha de creación: {formatDate(creationDate, true)}</CreationDate>
 
     </TextWrapper>
   </Wrapper>

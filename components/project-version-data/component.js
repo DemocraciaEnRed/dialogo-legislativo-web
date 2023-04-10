@@ -18,14 +18,18 @@ const MoreLink = styled.div`
   text-transform: uppercase;
 }
 `
-const formatDate = (createdAt) => {
-  return (createdAt.substring(0, 10).split('-').reverse().join('/'))
+const formatDate = (createdAt, hour=false) => {
+  let text = (createdAt.substring(0, 10).split('-').reverse().join('/'))
+  if (hour) {
+    // 2023-03-30T15:39:02.674Z
+    text += " " + (createdAt.substring(11, 16))
+  }
+  return text
 }
-
 const ProjectVersionData = ({ project, version, createdAt }) => (
   <StyledProjectVersionData>
     <ProjectVersion version={version} />
-    <ProjectCreationDate createdAt={formatDate(createdAt)} />
+    <ProjectCreationDate createdAt={formatDate(createdAt, true)} />
     <MoreLink >
       <Link href={{ pathname: '/versiones', query: { id: project } }}>Todas las versiones ➔</Link>
     </MoreLink>

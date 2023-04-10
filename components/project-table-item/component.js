@@ -80,8 +80,13 @@ const MobileDetail = styled.p`
   }
 `
 
-const formatDate = (createdAt) => {
-  return (createdAt.substring(0, 10).split('-').reverse().join('/'))
+const formatDate = (createdAt, hour=false) => {
+  let text = (createdAt.substring(0, 10).split('-').reverse().join('/'))
+  if (hour) {
+    // 2023-03-30T15:39:02.674Z
+    text += " " + (createdAt.substring(11, 16))
+  }
+  return text
 }
 
 export default ({ project }) => (
@@ -97,7 +102,7 @@ export default ({ project }) => (
         {project.currentVersion.version} {project.currentVersion.version > 1 ? 'Versiones' : 'Versión'}&nbsp;&nbsp;-&nbsp;&nbsp;
         {project.apoyosCount} Apoyo{project.apoyosCount != 1 && 's'}
         <br/>
-        Fecha de creación: {formatDate(project.createdAt)}&nbsp;&nbsp;-&nbsp;&nbsp;
+        Fecha de creación: {formatDate(project.createdAt, true)}&nbsp;&nbsp;-&nbsp;&nbsp;
         Fecha de cierre: {formatDate(project.currentVersion.content.closingDate)}
       </MobileDetail>
     </ProjectsTableCell>
@@ -121,7 +126,7 @@ export default ({ project }) => (
       </p>
     </ProjectsTableCell>
     <ProjectsTableCell  hiddenMobile centered>
-      {formatDate(project.createdAt)}
+      {formatDate(project.createdAt, true)}
     </ProjectsTableCell>
     <ProjectsTableCell  hiddenMobile centered>
       {formatDate(project.currentVersion.content.closingDate)}

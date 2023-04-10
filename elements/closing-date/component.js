@@ -27,15 +27,20 @@ margin-bottom:8px
 const StyledCreationDate = styled(StyledClosingDateTitle)`
 `
 
-const formatDate = (createdAt) => {
-  return (createdAt.substring(0, 10).split('-').reverse().join('/'))
+const formatDate = (createdAt, hour=false) => {
+  let text = (createdAt.substring(0, 10).split('-').reverse().join('/'))
+  if (hour) {
+    // 2023-03-30T15:39:02.674Z
+    text += " " + (createdAt.substring(11, 16))
+  }
+  return text
 }
 
 const ClosingDate = ({ closingDate, creationDate, closed }) => (
   <StyledDiv>
     <div>
       <StyledClosingDateTitle>Fecha de cierre: {formatDate(closingDate)}</StyledClosingDateTitle>
-      <StyledCreationDate>Fecha de creación: {formatDate(creationDate)}</StyledCreationDate>
+      <StyledCreationDate>Fecha de creación: {formatDate(creationDate, true)}</StyledCreationDate>
       {/* <ProgressBar closingDate={closingDate} creationDate={creationDate} closed={closed} /> */}
 
     </div>
