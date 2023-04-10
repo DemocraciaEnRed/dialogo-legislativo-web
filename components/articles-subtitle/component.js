@@ -7,7 +7,7 @@ const ArticlesSubtitle = ({ authenticated, editMode }) => (
   authenticated
     ? <Subtitle>
       { editMode ? 'Puede editar el texto y marcar comentarios como aportes.'
-        : 'Puede comentar haciendo selección sobre el fragmento de texto deseado.' }
+        : 'Podés comentar seleccionando el fragmento del texto sobre el que querés realizar un aporte.' }
     </Subtitle>
     : <FundationAlertLogin articles />
 )

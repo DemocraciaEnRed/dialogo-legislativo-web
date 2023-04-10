@@ -48,21 +48,21 @@ export default class extends Component {
     return (
       <FundationForm onSubmit={this.handleSubmit}>
         <FundationFormTitle>
-          Puede dejar sus comentarios sobre la presentación del proyecto aquí
+          Acá podés dejar tus comentarios sobre el proyecto
         </FundationFormTitle>
         <FundationFormLabel>
           <FundationFormTextarea
             value={this.state.comment}
             onChange={this.handleChange}
             error={this.state.emptyComment}
-            placeholder='Comience a escribir su comentario...' />
+            placeholder='Escribí acá tu comentario general' />
         </FundationFormLabel>
         { this.state.emptyComment &&
           <FundationErrorSpan>Este campo no puede estar vacío. Escriba su opinión y luego haga click en enviar comentario.</FundationErrorSpan>
         }
         <FundationFormButtonWrapper>
           {!this.props.error &&
-          <SubmitInput type='submit' value='Enviar comentario' />
+          <SubmitInput type='submit' value='Enviar' />
           }
           {this.props.error &&
           <CommentFormFeedback closeMessage={this.props.closeMessage} />
