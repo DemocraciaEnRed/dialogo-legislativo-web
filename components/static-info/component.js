@@ -32,7 +32,7 @@ const buttons = [
   {
     'name': 'Contacto',
     'value': 'contacto'
-  }
+  },
 ]
 
 const content = {
@@ -40,7 +40,7 @@ const content = {
   'como-participar': <ComoParticipar />,
   'faq': <FAQ />,
   'sobre-el-sitio': <SobreElSitio />,
-  'contacto': <Contacto />
+  'contacto': <Contacto />,
 }
 
 const StyledStaticInfo = styled.div`
@@ -63,6 +63,14 @@ const StaticInfo = (props) => (
             {button.name}
           </StaticInfoButton>
         ))}
+        <StaticInfoButton 
+          href="terminos-y-condiciones"
+          onClick={() => {
+            window.location = 'terminos-y-condiciones'
+          }}
+          >
+          Términos y condiciones
+        </StaticInfoButton>        
         {/* <StaticInfoButton onClick={() => window.open('/static/files/congreso_manual_de_usuario.pdf', '_blank')}>
           <Icon icon={download} size={16} /> Manual de usuario
         </StaticInfoButton> */}
