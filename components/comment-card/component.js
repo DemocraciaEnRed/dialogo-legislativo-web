@@ -210,7 +210,7 @@ class commentCard extends Component {
             userId={this.props.comment.user._id}
             name={this.props.comment.user.fullname}
             party={this.props.comment.user.party ? this.props.comment.user.party : (this.props.comment.user.fields ? this.props.comment.user.fields.occupation : '')} />
-          <p>{this.props.comment.content}</p>
+          <p style={{marginTop: "3rem"}}>{this.props.comment.content}</p>
           <ArticlesContext.Consumer>
             {
               ({ isAuthor, toggleSelectedComment, editMode, selectedCommentsIds, project }) =>
