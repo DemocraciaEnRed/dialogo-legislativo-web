@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StaticInfoP = styled.p`
+const StaticInfoOl = styled.ol`
   font-size: 1.8rem;
   line-height: 3.0rem;
   color: #454246;
@@ -9,6 +9,8 @@ const StaticInfoP = styled.p`
   margin-bottom: 2rem;
   text-align: justify;
   text-justify: inter-word;
+  padding-left: 5rem;
+  padding-right: 5rem;
 `
 
-export default StaticInfoP
+export default StaticInfoOl

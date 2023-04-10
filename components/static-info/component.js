@@ -36,8 +36,8 @@ const buttons = [
 ]
 
 const content = {
-  'como-participar': <ComoParticipar />,
   'acerca-de': <SobreLaPlataforma />,
+  'como-participar': <ComoParticipar />,
   'faq': <FAQ />,
   'sobre-el-sitio': <SobreElSitio />,
   'contacto': <Contacto />
@@ -63,9 +63,9 @@ const StaticInfo = (props) => (
             {button.name}
           </StaticInfoButton>
         ))}
-        <StaticInfoButton onClick={() => window.open('/static/files/congreso_manual_de_usuario.pdf', '_blank')}>
+        {/* <StaticInfoButton onClick={() => window.open('/static/files/congreso_manual_de_usuario.pdf', '_blank')}>
           <Icon icon={download} size={16} /> Manual de usuario
-        </StaticInfoButton>
+        </StaticInfoButton> */}
       </StaticInfoNav>
       {content[props.section]}
       

@@ -12,13 +12,13 @@ export default () => (
     <StaticInfoTitle>Contacto</StaticInfoTitle>
     <StyledDiv>
       <StaticInfoP>
-        Dirección General de Innovación, Planificación y Nuevas Tecnologías.
+      Dirección General de Modernización, Fortalecimiento Institucional y Sustentabilidad.
       </StaticInfoP>
       <StaticInfoP>
-        <a href='mailto:innovacion@hcdn.gob.ar'>innovacion@hcdn.gob.ar</a>.
+        <a href='mailto:dg.modernización@legislatura.gob.ar'>dg.modernización@legislatura.gob.ar</a>.
       </StaticInfoP>
       <StaticInfoP>
-        (+54 11) 6075-0000 interno 5003.
+        (+54 11) 4338-3000 Int. 1135
       </StaticInfoP>
     </StyledDiv>
   </section>
