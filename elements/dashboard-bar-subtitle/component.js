@@ -10,13 +10,13 @@ const Span = styled.span`
   font-size: 1.8rem;
   font-family: var(--black);  
   line-height: 1.13rem;
-  color: var(--primary-color);
+  color: var(--black);
   margin:0;
 `
 const ItemStyle = styled.p`
   font-size: 1.5rem;
   font-family: var(--medium);
-  color: #000; 
+  color: var(--primary-color); 
   margin-bottom: 0.5rem;
 `
 const BarActivitySubtitle = ({ number, children }) => (
