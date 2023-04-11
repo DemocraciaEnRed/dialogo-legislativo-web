@@ -7,6 +7,7 @@ const ProgressBarWrapper = styled.div`
   background-color: #c6c8ca;
   overflow: hidden;
   height: 40px;
+  border-radius: 1000px;
   position:relative;
 `
 

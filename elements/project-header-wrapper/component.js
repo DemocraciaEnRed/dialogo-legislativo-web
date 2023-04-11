@@ -7,6 +7,7 @@ const ProjectHeaderWrapper = styled.div`
   min-height: 215px;
   // padding: 3.4rem 3% 1.5rem 3%;
   padding: 25px 0 0;
+  box-shadow: 0px -2px 15px 3px rgba(0, 0, 0, 0.25);
   background-color: var(--white);
   // display: flex;
   // flex-wrap: wrap;

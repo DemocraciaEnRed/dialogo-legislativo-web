@@ -39,6 +39,7 @@ const Avatar = styled.div`
 `
 const Name = styled.div`
 color: var(--black);
+font-weight: bold;
 font-size: 15px;
 font-family:var(--regular);
 cursor: pointer;
