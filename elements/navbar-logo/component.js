@@ -6,6 +6,9 @@ const StyledLogo = styled.div`
 width:33%;
 display:flex;
 justify-content:center;
+@media (max-width: 760px) {
+  width:50%;
+}
 `
 
 const Logo = styled.div`
@@ -17,7 +20,6 @@ const Logo = styled.div`
   box-sizing: border-box;
   cursor:pointer;
   @media (max-width: 760px) {
-    width: 67px;
     height: 51px;
     margin-top:auto;
   }
