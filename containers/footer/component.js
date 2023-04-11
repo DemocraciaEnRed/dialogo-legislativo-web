@@ -7,7 +7,7 @@ import { facebook, twitter, instagram, youtube } from 'react-icons-kit/fa'
 
 const FooterWrapper = styled.footer`
   width: 100%;
-  background-color: var(--black);
+  background-color: #1A1A1A;
   display:flex;
   flex-wrap: wrap;
   margin-top: 5rem;
@@ -44,6 +44,7 @@ const H2 = styled.h2`
 
 const Li = styled.li`
   font-size: 1.6em;
+  line-height: 2em
 `
 
 
@@ -80,39 +81,31 @@ const links = [
 const socials = [
   {
     icon: <Icon icon={facebook} />,
-    hash: '',
-    link: ''
+    link: 'https://www.facebook.com/LegisCABA'
   },
   {
     icon: <Icon icon={twitter} />,
-    hash: '',
-    link: ''
+    link: 'https://twitter.com/LegisCABA'
   },
   {
     icon: <Icon icon={youtube} />,
-    hash: '',
-    link: ''
+    link: 'https://www.youtube.com/LegisCABA2'
   },
   {
     icon: <Icon icon={instagram} />,
-    hash: '',
-    link: ''
+    link: 'https://instagram.com/LegisCABA'
   },
   {
     icon: '@LegisCABA',
-    hash: '',
-    link: ''
+    link: 'https://instagram.com/LegisCABA'
   },
 ]
 
-const FooterLink = ({ name, link, hash }) => {
-  const move = async () => {
-    await router.push(link)
-    jump(hash)
-  }
+const FooterLink = ({ name, link }) => {
+
 
   return (
-    <a onClick={() => move()} style={{'padding': '10px', 'color': 'var(--white)', 'font-size': '1.5rem'}}>
+    <a href={link} target="_blank" style={{'padding': '10px', 'color': 'var(--white)', 'font-size': '1.5rem'}}>
       { name }
     </a>
   )
@@ -145,8 +138,7 @@ const Footer = () => (
             return <FooterLink
               key={i}
               name={li.icon}
-              link={li.link}
-              hash={li.hash} />
+              link={li.link} />
           })}
         </Sections>        
       </Links>
