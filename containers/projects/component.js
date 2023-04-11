@@ -59,19 +59,20 @@ display: flex;
 
 const OptionsSection = styled.div`
 cursor: pointer
-background: #BDBDBD;
-border-radius: 10px;
 margin: 10px
 `
 
 const OptionsHeader = styled.div`
-padding:  10px 22px;
+padding:  10px 10px 10px 22px;
+border-radius: 10px;
+background: #BDBDBD;
 display:flex;
 justify-content: space-between;
 
 `
 
 const OptionsMenu = styled.div`
+border-radius: 10px;
 background-color: #F1ECEA;
 display: ${(props) => props.projectState || props.projectTags || props.projectSort ? 'flex' : 'none'}; 
 flex-direction: column;
@@ -81,6 +82,7 @@ const OptionLabel = styled.div`
 font-size: ${(props) => props.isTitle || props.isTopTitle ? '1.6rem' : '1.4rem'};
 color: ${(props) => props.isTitle || props.isTopTitle ? '#000' : 'var(--primary-color)'}; 
 padding: ${(props) =>  props.isTopTitle && '10px 20px'};
+margin-top: 0.5rem;
 font-weight: 'normal';
 display: ${(props) => props.isTitle || props.isTopTitle ? 'block' : 'inline-block'};
 box-shadow:${(props) => props.isTopTitle && '0px 2px 3px rgb(0 0 0 / 25%);'} ;
