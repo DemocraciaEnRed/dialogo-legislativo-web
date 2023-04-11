@@ -64,6 +64,9 @@ margin: 10px
 
 const OptionsHeader = styled.div`
 padding:  10px 10px 10px 22px;
+@media(max-width:700px){
+  padding: 3px 3px 3px 7px;
+ }
 border-radius: 10px;
 background: #BDBDBD;
 display:flex;
@@ -86,6 +89,9 @@ margin-top: 0.5rem;
 font-weight: 'normal';
 display: ${(props) => props.isTitle || props.isTopTitle ? 'block' : 'inline-block'};
 box-shadow:${(props) => props.isTopTitle && '0px 2px 3px rgb(0 0 0 / 25%);'} ;
+@media(max-width:700px){
+  display: ${(props) => !props.isTitle && 'none'}
+}
 
 
 `

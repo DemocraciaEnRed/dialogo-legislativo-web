@@ -15,13 +15,19 @@ const FooterWrapper = styled.footer`
   align-items: center;
   height: 260px;
   text-align: center;
-  color: var(--white)
+  color: var(--white);
+  @media(max-width:700px){
+    display: table
+  }  
 `
 
 const Info = styled.div`
   width: 50%;
   text-align: left;
   padding-left: 10%
+  @media(max-width:700px){
+    width: 100%;
+  }  
 `
 
 
@@ -43,7 +49,7 @@ const H2 = styled.h2`
 `
 
 const Li = styled.li`
-  font-size: 1.6em;
+  font-size: 1.4em;
   line-height: 2em
 `
 
@@ -52,7 +58,11 @@ const Links = styled.div`
   text-align: right;
   width: 50%;
   padding-right: 10%
-  justify-content:flex-end;
+  justify-content:flex-end;   
+  @media(max-width:700px){
+    width: 100%;
+    margin: 5rem
+  }    
 `
 
 const Sections = styled.div`
