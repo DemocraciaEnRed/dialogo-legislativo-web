@@ -12,7 +12,7 @@ import StaticInfoButton from '../../elements/static-info-button/component'
 const StyledStaticInfo = styled.div`
   display: flex;
   justify-content: center;
-  background-image: url('/static/assets/header-background.jpg');
+  background-image: url('/static/assets/images/fondo-tyc.jpg');
   background-repeat: no-repeat;
 `
 const buttons = [
