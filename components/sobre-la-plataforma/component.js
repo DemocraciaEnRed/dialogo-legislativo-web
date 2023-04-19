@@ -35,8 +35,7 @@ export default () => (
         ¿Qué es la cocreación de propuestas de ley?
       </StaticInfoBold>
       <StaticInfoP>
-       
-        <strong>La cocreación de proyectos de ley rompe con la forma tradicional de legislar</strong>, donde un equipo de políticos, profesionales y técnicos elaboran los proyectos de ley. Cocrear supone abrir ese proceso y crear un espacio en el que se encuentran las y los legisladores/as con la ciudadanía, la academia, organizaciones de la sociedad civil y personas especializadas en las temáticas que se están discutiendo.
+        <strong>Co-crear una propuesta de ley desafía la manera en la que tradicionalmente se legisla.</strong> Al co-crear, se abre el proceso de elaboración de la propuesta para una mayor sinergia entre legisladores/as, academia, tercer sector, especialistas y la ciudadanía.
       </StaticInfoP>
     </StyledDiv>
   </section>

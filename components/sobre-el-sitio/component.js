@@ -12,10 +12,10 @@ export default () => (
     <StaticInfoTitle>Sobre el sitio</StaticInfoTitle>
     <StyledDiv>
       <StaticInfoP>
-      El Portal Diálogo Legislativo es un desarrollo basado en la tecnología provista por Democracia en Red, coordinado por el Programa de Modernización parlamentaria de la Cámara de Diputados de La Nación.
+      El Portal Diálogo Legislativo es un desarrollo que se encuentra basado en la tecnología provista por DemocracyOS y que fue adaptado a la Legislatura de la Ciudad de Buenos Aires. 
       </StaticInfoP>
       <StaticInfoP>
-      Esta es una versión “Beta”, aún en evaluación y desarrollo. Como tal, puede tener errores que pueden ser reportados a <a href='mailto:dg.modernización@legislatura.gob.ar'>dg.modernización@legislatura.gob.ar</a>.
+      Al tratarse de una versión “Beta”, pueden presentarse errores. Los mismos pueden ser reportados a la Dirección General de Modernización, Fortalecimiento Institucional y Sustentabilidad a través del correo electrónico: <a href='mailto:dg.modernización@legislatura.gob.ar'>dg.modernización@legislatura.gob.ar</a>.
       </StaticInfoP>
     </StyledDiv>
   </section>
