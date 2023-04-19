@@ -13,7 +13,7 @@ const StyledCommentsGrid = styled.div`
   border: 1px solid #dae1e7;
   max-height: 100vh;
   overflow-y: scroll;
-  z-index: 1;
+  z-index: 100;
   background-color: #FFF;
   min-width: 300px;
   width: 33%;
