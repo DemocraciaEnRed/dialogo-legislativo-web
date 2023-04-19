@@ -28,7 +28,7 @@ const newDocument = {
   'closed': false,
   'customForm': 'project-form',
   'content': {
-    'title': 'Mi nuevo proyecto',
+    'title': 'Mi nueva propuesta',
     'imageCover': null,
     'youtubeId': null,
     'customVideoId': null,
@@ -51,7 +51,7 @@ const newDocument = {
                 'leaves': [
                   {
                     'object': 'leaf',
-                    'text': 'Esta sección es un espacio para redactar un texto que sirve para presentar el proyecto, explicar el contexto (de donde surge, su importancia, etc.), e invitar la ciudadanía a participar. Es muy importante mencionar qué tipo de aportes ciudadanos se esperan. El proyecto tiene que estar explicado de manera muy simple, la redacción debe ser fácil de entender.',
+                    'text': 'Esta sección es un espacio para redactar un texto que sirve para presentar la propuesta, explicar el contexto (de donde surge, su importancia, etc.), e invitar la ciudadanía a participar. Es muy importante mencionar qué tipo de aportes ciudadanos se esperan. La propuesta tiene que estar explicado de manera muy simple, la redacción debe ser fácil de entender.',
                     'marks': [
                     ]
                   }
@@ -496,7 +496,7 @@ toggleSort = (parameter, value) => {
       proyectos
       {
       isLoading
-        ? <ButtonTableDisabled float="right"><Icon icon={clockO} size={20} />&nbsp;&nbsp;Creando nuevo proyecto... Espere unos segundos...</ButtonTableDisabled>
+        ? <ButtonTableDisabled float="right"><Icon icon={clockO} size={20} />&nbsp;&nbsp;Creando nueva propuesta... Espere unos segundos...</ButtonTableDisabled>
         : <ButtonTable onClick={this.createProject} float="right"><Icon icon={plus} size={20} />&nbsp;&nbsp;Agregar una nueva propuesta</ButtonTable>
       }          
     </TitleContent>

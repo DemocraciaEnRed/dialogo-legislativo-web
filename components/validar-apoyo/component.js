@@ -86,10 +86,10 @@ export default () => {
         <Link href={project && { pathname: '/propuesta', query: { id: project._id } } || '/'}>
           aquí
         </Link>
-        &nbsp;para volver al {project && 'proyecto' || 'inicio'}
+        &nbsp;para volver a {project && 'propuesta' || 'inicio'}
       </Note>
 
-      <ProjectsTitle>Otros proyectos que puedes apoyar:</ProjectsTitle>
+      <ProjectsTitle>Otras propuestas que puedes apoyar:</ProjectsTitle>
       {projects &&
         <Masonry style={{ width: '100%', margin: '3.1rem 0 1.6rem' }}>
           {projects.map((p, i) => (

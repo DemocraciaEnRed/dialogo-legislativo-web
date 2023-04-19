@@ -88,7 +88,7 @@ const ModeBarApoyarButton = forwardRef((props, ref) => {
     <StyledButton {...props} onClick={!project.closed && toggleFormulario}>
       <Text>
         { project.closed ? 'Apoyos' :
-          (project.userIsApoyado ? 'Apoyando' : 'Apoyar proyecto')
+          (project.userIsApoyado ? 'Apoyando' : 'Apoyar propuesta')
         }
       </Text>
       <CommentaryIcon icon='hand-holding-heart-solid.svg' />

@@ -48,7 +48,7 @@ export default class extends Component {
     return (
       <FundationForm onSubmit={this.handleSubmit}>
         <FundationFormTitle>
-          Acá podés dejar tus comentarios sobre el proyecto
+          Acá podés dejar tus comentarios sobre la propuesta
         </FundationFormTitle>
         <FundationFormLabel>
           <FundationFormTextarea

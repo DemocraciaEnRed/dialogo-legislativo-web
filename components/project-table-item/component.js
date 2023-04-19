@@ -132,7 +132,7 @@ export default ({ project }) => (
       {formatDate(project.currentVersion.content.closingDate)}
     </ProjectsTableCell>
     <ProjectsTableCell  hiddenMobile centered>
-      <Link href={{ pathname: '/propuesta', query: { id: project._id } }}>Ir al proyecto ➔</Link>
+      <Link href={{ pathname: '/propuesta', query: { id: project._id } }}>Ir a la propuesta ➔</Link>
     </ProjectsTableCell>
   </ProjectsTableRow>
 )

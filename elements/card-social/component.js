@@ -297,7 +297,7 @@ const Social = ({ commentaries, apoyosCount, reaction, handleReaction, handleEmo
           closed && (
             <Link href={{ pathname: '/propuesta', query: { id: projectId } }}>
               <SocialDiv style={{ cursor: 'pointer' }}>
-                <Support>Ver proyecto</Support>
+                <Support>Ver propuesta</Support>
                 <AnIcon src='/static/assets/arrow-right.svg' />
               </SocialDiv>
             </Link>

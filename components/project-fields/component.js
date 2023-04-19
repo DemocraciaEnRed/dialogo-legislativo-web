@@ -1068,9 +1068,9 @@ class ProjectFields extends Component {
 
     return (
       <EditField>
-        <EditorTitle>Datos del proyecto</EditorTitle>
+        <EditorTitle>Datos de la propuesta</EditorTitle>
         <ProfileLabel>
-          Título del proyecto:
+          Título de la propuesta:
           <InputField
             type='text'
             value={this.state.title}
@@ -1096,7 +1096,7 @@ class ProjectFields extends Component {
             onChange={this.handleInputChange} />
         </ProfileLabel> */}
         <ProfileLabel>
-          Fecha de cierre del proyecto:
+          Fecha de cierre de la propuesta:
           {/* <InputField
             type='date'
             value={this.state.closingDate}
@@ -1150,7 +1150,7 @@ class ProjectFields extends Component {
             name='customVideoId'
             value={this.state.customVideoId}
             onChange={this.handleInputChange} />
-          {!this.state.customVideoId && <SpanOk>Link invalido o vacio (El proyecto se publicará sin video)</SpanOk>
+          {!this.state.customVideoId && <SpanOk>Link invalido o vacio (La propuesta se publicará sin video)</SpanOk>
           }
           <SpanOk>NOTA: Ingrese solamente el dominio del video, sin "https://", que termina hasta ".mp4". (Ej: argos.hcdn.gob.ar/DMPARL/tutorial.mp4)</SpanOk>
         </ProfileLabel>}
@@ -1161,12 +1161,12 @@ class ProjectFields extends Component {
             name='youtubeURL'
             value={this.state.youtubeURL || ''}
             onChange={this.handleInputChangeYoutube} />
-          {!this.state.youtubeId && <SpanOk>Link invalido o vacio (El proyecto se publicará sin video)</SpanOk>
+          {!this.state.youtubeId && <SpanOk>Link invalido o vacio (La propuesta se publicará sin video)</SpanOk>
           }
         </ProfileLabel>}
         { this.state.videoSource === 'noVideo' && <ProfileLabel>
           
-          <SpanOk>NOTA: El proyecto se publicará sin video</SpanOk>
+          <SpanOk>NOTA: La propuesta se publicará sin video</SpanOk>
         </ProfileLabel>}
         <ProfileLabel>
           Palabras de cierre
@@ -1193,7 +1193,7 @@ class ProjectFields extends Component {
           </SpanOk>
         </ProfileLabel>
         <ProfileLabel>
-          Notificación de proyecto publicado
+          Notificación de propuesta publicada
           <TagsNotificationCheckboxDiv publishedMailSent={this.state.publishedMailSent}>
             { !this.state.publishedMailSent &&
               <input
@@ -1209,7 +1209,7 @@ class ProjectFields extends Component {
             }
           </TagsNotificationCheckboxDiv>
           <SpanOk>
-             Los mails se enviarán una vez que publiques el proyecto. Esto se puede hacer <b>una sola vez</b>.
+             Los mails se enviarán una vez que publiques la propuesta. Esto se puede hacer <b>una sola vez</b>.
           </SpanOk>
         </ProfileLabel>
       </EditField>
