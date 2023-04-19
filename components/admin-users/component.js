@@ -145,7 +145,7 @@ class UsersAdmin extends Component{
       }
       {
         !fetching && !fetchMoreAvailable  &&
-        <MessagePaginator>No hay más propuestas de iniciativas</MessagePaginator>
+        <MessagePaginator>No hay más propuestas</MessagePaginator>
       }
     </Content>
 

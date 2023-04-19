@@ -29,11 +29,11 @@ const Participate = (props) => {
       <ParticipateContainer>
         <ParticipateItem>
           <ParticipateTextbox number={'1'} action={'Informate'} />
-          <ParticipateP text={'Ingresá y leé las iniciativas.'} />
+          <ParticipateP text={'Ingresá y leé las propuestas.'} />
         </ParticipateItem>
         <ParticipateItem>
           <ParticipateTextbox number={'2'} action={'Participá'} />
-          <ParticipateP text={'Dejá tus comentarios sobre las iniciativas y hacé aportes de forma general o por articulado.'} />
+          <ParticipateP text={'Dejá tus comentarios sobre las propuestas y hacé aportes de forma general o por articulado.'} />
         </ParticipateItem>
         <ParticipateItem>
           <ParticipateTextbox number={'3'} action={'Involucrate'} />

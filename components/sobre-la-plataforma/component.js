@@ -16,7 +16,7 @@ export default () => (
         ¿Qué es?
       </StaticInfoBold>
       <StaticInfoP>
-        <strong>El Portal Diálogo Legislativo</strong> es una <strong>plataforma online de elaboración colaborativa de normas</strong> donde las y los diputados/as ponen a disposición de la ciudadanía las iniciativas que están trabajando para incorporar nuevos puntos de vista. El objetivo de la plataforma es enriquecer las propuestas de ley y generar un nuevo espacio de comunicación con la ciudadanía, que permita enriquecer el debate parlamentario.
+        <strong>El Portal Diálogo Legislativo</strong> es una <strong>plataforma online de elaboración colaborativa de normas</strong> donde las y los diputados/as ponen a disposición de la ciudadanía las propuestas que están trabajando para incorporar nuevos puntos de vista. El objetivo de la plataforma es enriquecer las propuestas de ley y generar un nuevo espacio de comunicación con la ciudadanía, que permita enriquecer el debate parlamentario.
       </StaticInfoP>
     </StyledDiv>
     <StyledDiv>

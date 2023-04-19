@@ -47,7 +47,7 @@ export default () => (
         Políticas de privacidad
           </StaticInfoBold>
           <StaticInfoP>
-            La recolección y tratamiento de los datos personales tiene como finalidad conocer más sobre el uso de la Plataforma, para mejorar la iniciativa.
+            La recolección y tratamiento de los datos personales tiene como finalidad conocer más sobre el uso de la Plataforma, para mejorar la propuesta.
           </StaticInfoP>
           <StaticInfoP>
             La HCDN no cederá a ninguna otra persona ni organismo los datos personales de los usuarios que se registren, salvo orden judicial en contrario.

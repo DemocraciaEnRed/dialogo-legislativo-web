@@ -137,7 +137,7 @@ class ToggleAcceptComments extends Component {
         this.props.toggleAcceptComments()
         this.setState({
           showAlert: true,
-          alertText: newState ? 'Se aceptarán comentarios en la iniciativa' : 'No se aceptarán comentarios en la iniciativa',
+          alertText: newState ? 'Se aceptarán comentarios en la propuesta' : 'No se aceptarán comentarios en la propuesta',
           alertType: 'success',
           isLoading: false
         })

@@ -162,7 +162,7 @@ class UserEditor extends Component {
         {this.state.showAddComment &&
           <AddComment top={this.state.top} left={this.state.left} />
         }
-        <EditorTitle>Artículos de la iniciativa</EditorTitle>
+        <EditorTitle>Artículos de la propuesta</EditorTitle>
         <div ref={this.myEditor}>
           <Editor
             className='editor'

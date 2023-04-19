@@ -27,7 +27,7 @@ const About = () => (
     <AboutText>
       <AboutH2>Acerca de</AboutH2>
       <br />
-      <AboutP>¿Qué es? El <strong>Portal Diálogo Legislativo</strong> es una plataforma de elaboración colaborativa de normas, donde las y los diputados abren a debate sus iniciativas para incorporar puntos de vista ciudadanos.</AboutP>
+      <AboutP>¿Qué es? El <strong>Portal Diálogo Legislativo</strong> es una plataforma de elaboración colaborativa de normas, donde las y los diputados abren a debate sus propuestas para incorporar puntos de vista ciudadanos.</AboutP>
       <ArrowRightLink />
     </AboutText>
   </StyledAbout>

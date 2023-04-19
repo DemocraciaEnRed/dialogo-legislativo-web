@@ -184,7 +184,7 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, canAcceptC
             <SocialSection>
               {/* <SharerButton>
                 <SharerSpan>
-                  Compartir iniciativa
+                  Compartir propuesta
                 </SharerSpan>
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}
@@ -206,7 +206,7 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, canAcceptC
             <SocialSection>
               {/* <SharerButton>
                 <SharerSpan>
-                  Compartir iniciativa
+                  Compartir propuesta
                 </SharerSpan>
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}
@@ -232,7 +232,7 @@ const ProjectHeader = ({ project, userReaction, section, isPublished, canAcceptC
             <SocialSection>
               {/* <SharerButton>
                 <SharerSpan>
-                  Compartir iniciativa
+                  Compartir propuesta
                 </SharerSpan>
                 <Icon icon={shareAlt} size={15} />
               </SharerButton> */}

@@ -12,7 +12,7 @@ const StyledProjectBarLink = styled.a`
 const ProjectBarLink = () => (
   <Link href='/'>
     <StyledProjectBarLink>
-      Volver a Listado de Iniciativas
+      Volver a Listado de Propuestas
     </StyledProjectBarLink>
   </Link>
 )

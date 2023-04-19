@@ -181,7 +181,7 @@ class UserEditor extends Component {
         { !this.props.isClosed && this.props.canAcceptComments &&
           <ArticlesSubtitle authenticated={this.props.authContext.authenticated} editMode={this.props.editMode} />
         }
-        <EditorTitle>Artículos de la iniciativa</EditorTitle>
+        <EditorTitle>Artículos de la propuesta</EditorTitle>
         <div ref={this.myEditor}>
           <Editor
             plugins={plugins}

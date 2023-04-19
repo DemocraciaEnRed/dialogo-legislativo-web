@@ -74,7 +74,7 @@ const ModeBarSharedButton = forwardRef((props, ref) => {
   return <WrapperDiv>
     <SharerButton {...props} onClick={toggleSocial}>
       <SharerSpan>
-        Compartir iniciativa
+        Compartir propuesta
       </SharerSpan>
       <Icon icon={shareAlt} size={window.innerWidth > 760 ? 14 : 10} />
     </SharerButton>

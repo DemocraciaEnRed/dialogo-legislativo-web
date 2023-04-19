@@ -45,7 +45,7 @@ const buttons = [
     value: 'prohibido',
   },
   {
-    name: '8. Moderación de las iniciativas',
+    name: '8. Moderación de las propuestas',
     value: 'moderacion',
   },
   {
@@ -191,7 +191,7 @@ export default () => (
         </div>
         <div id='moderacion'>
           <StaticInfoBold>
-              8. Moderación de las iniciativas
+              8. Moderación de las propuestas
             </StaticInfoBold>
             <StaticInfoP>
             Cada propuesta publicada en la Plataforma tendrá un moderador responsable de hacer cumplir estos Términos y Condiciones. Fomentamos un diálogo franco y abierto, pero manteniendo el nivel de la discusión, evitando afrentas a personas o instituciones, cualquier tipo de material comercial no relacionado (SPAM) u otros desvíos de la intención original de la Plataforma.
@@ -235,7 +235,7 @@ export default () => (
             10. Política de privacidad
             </StaticInfoBold>
             <StaticInfoP>
-            La recolección y tratamiento de los datos personales tiene fines identificatorios para conocer más sobre el uso de la plataforma, para mejorar la iniciativa.
+            La recolección y tratamiento de los datos personales tiene fines identificatorios para conocer más sobre el uso de la plataforma, para mejorar la propuesta.
             </StaticInfoP>
             <StaticInfoP>
             La LCABA no venderá, cederá y/o transferirá a ninguna otra persona ni organismo los datos personales de los usuarios que se registren. El deber de secreto podrá ser relevado por resolución judicial cuando medien razones fundadas relativas a la seguridad pública, la defensa nacional o salud pública, conforme al artículo 16 de la ley Nº 1845 y sus normas modificatorias y complementarias.

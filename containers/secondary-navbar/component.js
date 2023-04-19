@@ -65,7 +65,7 @@ const links = [
     link: '/'
   },
   {
-    name: 'Iniciativas',
+    name: 'Propuestas',
     hash: '#projects',
     link: '/'
   },
