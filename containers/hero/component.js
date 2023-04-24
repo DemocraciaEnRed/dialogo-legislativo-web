@@ -147,22 +147,14 @@ font-size:1.4rem;
 
 const Hero = () => {
   const [isMobile, updateSize] = useState(false);
-  const [active, setActive] = useState('about')  
   
-  const move = async (hash) => {
-    jump('#'+hash)
-  }
-
-
-
   useEffect(() => {
     updateSize(window.innerWidth <= 768);
     window.addEventListener("resize", () => updateSize(window.innerWidth <= 768));
   }, []);
 
-  const handleActiveButton = (button)=>{
-    setActive(button)
-    move(button)
+  const handleActiveButton = (hash)=>{
+    jump('#'+hash)
   }
 
  return( <StyledHero>
