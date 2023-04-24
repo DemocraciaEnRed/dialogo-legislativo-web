@@ -5,6 +5,8 @@ import HeroTitle from '../../elements/hero-title/component'
 import HeroSubtitle from '../../elements/hero-subtitle/component'
 import HeroVideo from '../../elements/hero-video/component'
 import {useMediaQuery} from '@react-hook/media-query'
+import jump from 'jump.js'
+
 // const StyledHero = styled.div`
 //   min-height: 350px;
 //   background-image: url('/static/assets/background-hero.jpg');
@@ -30,6 +32,7 @@ overflow:hidden;
 
   // min-height: 350px;
 `
+
 
 const BannerImg = styled.div`
 background-image: url(${props => props.srcImg});
@@ -105,27 +108,78 @@ letter-spacing: 0.5px;
   color:#4C4C4E;
   font-size:1.5em;
 }
+`
+const HeroButtons = styled.div`
+width:25%
+height:40px
+top:45%;
+right:8%;
+background:#686868;
+position: absolute
+border-radius: 50px;
+display:flex;
+align-items:center;
+justify-content: space-evenly;
+z-index:1
+@media ( max-width:768px){
+  width:50%
+  height:35px
+  right:25%;
+  top:auto
+  bottom:5%
+  margin:auto
+}
+
+`
+
+const ButtonRounded = styled.button`
+height:80%;
+background:${(props) => props.active ? '#8665E0':'transparent'};
+color:white;
+border:none;
+width:48%;
+border-radius: 50px;
+font-family var(--bold);
+cursor: pointer;
+font-size:1.4rem;
 
 `
 
 const Hero = () => {
-  const [isMobile, updateSize] = useState(false);  
+  const [isMobile, updateSize] = useState(false);
+  const [active, setActive] = useState('about')  
   
+  const move = async (hash) => {
+    jump('#'+hash)
+  }
+
+
+
   useEffect(() => {
     updateSize(window.innerWidth <= 768);
     window.addEventListener("resize", () => updateSize(window.innerWidth <= 768));
   }, []);
+
+  const handleActiveButton = (button)=>{
+    setActive(button)
+    move(button)
+  }
 
  return( <StyledHero>
     {/* <HeroTitle>Plataforma de Participación Ciudadana en Propuestas de Ley</HeroTitle>
     <HeroSubtitle>¡Participe haciendo aportes para co-crear mejores leyes!</HeroSubtitle>
     <HeroVideo video='argos.hcdn.gob.ar/DMPARL/tutorial.mp4' /> */}
     {/* <BannerImg srcImg="/static/assets/images/banner_legi.jpg" /> */}
-    <video key={isMobile} style={{}} id="videobcg" className="fill" width="100%" height="100%" preload="auto" autoPlay={true} loop={true} muted={true} volume="0" poster="/static/assets/images/thumbnail-banner-01.jpg" >
+    <HeroButtons>
+      <ButtonRounded onClick={()=>handleActiveButton('about')} active>Sobre PDL</ButtonRounded>
+      <ButtonRounded onClick={()=>handleActiveButton('participate')}>Como Participar</ButtonRounded>
+    </HeroButtons>
+    <video key={isMobile} style={{}} id="videobcg" className="fill" width="100%" height="100%" preload="auto" autoPlay={true} loop={true} muted={true} volume="0" poster="/static/assets/images/thumbnail-banner-01.png" >
         {isMobile && <source src="/static/assets/images/banner-mobile.mp4"  type="video/mp4"/> }
-        {!isMobile && <><source src="/static/assets/images/banner-01.webm" type="video/webm" /> <source src="/static/assets/images/banner-01.mp4"  type="video/mp4" /> </> }
+        {!isMobile && <><source src="/static/assets/images/banner-01.mp4"  type="video/mp4" /> </> }
       Sorry, your browser does not support HTML5 video.
     </video>
+  
   </StyledHero>)
 }
 
