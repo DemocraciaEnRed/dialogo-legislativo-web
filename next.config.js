@@ -11,5 +11,6 @@ module.exports = {
     PUBLIC_CLIENT: process.env.PUBLIC_CLIENT,
     CONFIDENTIAL_PORT: process.env.CONFIDENTIAL_PORT,
     API_KEY: process.env.API_KEY
-  }
+  },
+  poweredByHeader: false,
 }
