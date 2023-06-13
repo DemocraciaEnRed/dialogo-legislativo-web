@@ -12,6 +12,9 @@ const SubmitInput = styled.input`
   padding: 0 2rem;
   font-family: var(--bold);
   border-radius: 39.0428px;
+  &:hover {
+    background-color: var(--primary-color);
+  }  
 `
 
 export default SubmitInput
