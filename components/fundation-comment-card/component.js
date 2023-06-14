@@ -124,6 +124,24 @@ const DeletedNotice = styled.div`
   margin-bottom:2rem;
 `
 
+const StyledConfirmDeleteComment = styled.button`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  z-index: 100;
+  width: 308px;
+  background-color: var(--black);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  justify-content: space-around;
+  border-radius: 10px;
+  color: #FFF;
+  cursor: pointer;
+  border: none;
+`
+
 class FundationCommentCard extends Component {
   state = {
     liked: false,
@@ -131,7 +149,8 @@ class FundationCommentCard extends Component {
     deleted: false,
     errorDelete: false,
     showReply: false,
-    showOptions: true
+    showOptions: true,
+    showDeleteComment: false
   }
 
   componentDidMount() {
@@ -213,7 +232,7 @@ class FundationCommentCard extends Component {
 
   render() {
     const { comment, canDelete, canReply, project } = this.props
-    const { deleted, errorDelete, showOptions, showReply } = this.state
+    const { deleted, errorDelete, showOptions, showReply, showDeleteComment } = this.state
     const isAuthor = comment.user.roles.includes('accountable')
     return (
       <div>
@@ -242,10 +261,16 @@ class FundationCommentCard extends Component {
                   </StyledReplyWrapper>
                 }
                 {canDelete && !errorDelete &&
-                  <StyledDeleteWrapper onClick={this.handleDelete(comment._id)}>
+                  <StyledDeleteWrapper onClick={() => this.setState({showDeleteComment: !showDeleteComment})}>   
                     <Icon icon={trash2} style={{ marginRight: '5px' }} />Eliminar
                   </StyledDeleteWrapper>
                 }
+                {
+                  showDeleteComment &&
+                    <StyledConfirmDeleteComment onClick={this.handleDelete(comment._id)}>
+                      Haz clic aquí para confirmar la eliminación de este comentario.
+                    </StyledConfirmDeleteComment>      
+                }                 
                 {canDelete && errorDelete &&
                   <StyledErrorWrapper>
                     <Icon icon={times} style={{ marginRight: '5px' }} />Error al eliminar comentario
