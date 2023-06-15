@@ -85,6 +85,7 @@ export default class extends Component {
           <Editor
             plugins={plugins}
             onChange={this.onChange}
+            readOnly={!this.props.isAuthor}
             className='editor'
             value={this.state.value}
             spellCheck={false} />
