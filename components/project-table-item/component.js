@@ -80,6 +80,14 @@ const MobileDetail = styled.p`
   }
 `
 
+const TagIcon = styled.img`
+  width: 13px;
+  height: 13px;
+  margin-right: 0.5rem;
+  margin-bottom: 1px;
+`
+
+
 const formatDate = (createdAt, hour=false) => {
   let text = (createdAt.substring(0, 10).split('-').reverse().join('/'))
   if (hour) {
@@ -100,7 +108,11 @@ export default ({ project }) => (
         <MobileDetailWithIcon color={project.published ? 'inherit' : 'purple'}>{project.published ? <Icon icon={eye} size={12} /> : <Icon icon={lowVision} size={12} /> }&nbsp;&nbsp;{project.published ? 'Publico' : 'Oculto'}</MobileDetailWithIcon>&nbsp;&nbsp;-&nbsp;&nbsp;
         {project.commentsCount} Aport{project.commentsCount > 1 ? 'es' : 'e'}&nbsp;&nbsp;-&nbsp;&nbsp;
         {project.currentVersion.version} {project.currentVersion.version > 1 ? 'Versiones' : 'Versión'}&nbsp;&nbsp;-&nbsp;&nbsp;
-        {project.apoyosCount} Apoyo{project.apoyosCount != 1 && 's'}
+        {console.log(project)}
+        {project.emoteLike.length} <TagIcon src='/static/assets/thumb-up.svg' />;
+        {project.emoteLove.length} <TagIcon src='/static/assets/heart.svg' />;
+        {project.emoteImprove.length} <TagIcon src='/static/assets/lightbulb.svg' />;
+        {project.emoteDislike.length} <TagIcon src='/static/assets/thumb-down.svg' />
         <br/>
         Fecha de creación: {formatDate(project.createdAt, true)}&nbsp;&nbsp;-&nbsp;&nbsp;
         Fecha de cierre: {formatDate(project.currentVersion.content.closingDate)}
@@ -122,9 +134,19 @@ export default ({ project }) => (
     </ProjectsTableCell>
     <ProjectsTableCell  hiddenMobile centered>
       <p>
-        {project.apoyosCount} Apoyo{project.apoyosCount != 1 && 's'}
+        {project.emoteLike.length + project.emoteLove.length + project.emoteImprove.length + project.emoteDislike.length} Reacciones
       </p>
     </ProjectsTableCell>
+    <ProjectsTableCell  hiddenMobile centered>
+      <p>
+        {project.emoteLike.length } <TagIcon src='/static/assets/thumb-up.svg' />
+        {project.emoteLove.length } <TagIcon src='/static/assets/heart.svg' />
+      </p>
+      <p>      
+        {project.emoteImprove.length } <TagIcon src='/static/assets/lightbulb.svg' />
+        {project.emoteDislike.length } <TagIcon src='/static/assets/thumb-down.svg' />
+      </p>
+    </ProjectsTableCell>    
     <ProjectsTableCell  hiddenMobile centered>
       {formatDate(project.createdAt, true)}
     </ProjectsTableCell>

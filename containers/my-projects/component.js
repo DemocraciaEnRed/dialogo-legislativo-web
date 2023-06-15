@@ -647,7 +647,8 @@ class MyProjects extends Component {
                     <ProjectsTableHeader>Nombre</ProjectsTableHeader>
                     <ProjectsTableHeader hiddenMobile centered>Status</ProjectsTableHeader>
                     <ProjectsTableHeader width={100} hiddenMobile centered>Aportes</ProjectsTableHeader>
-                    <ProjectsTableHeader width={100} hiddenMobile centered>Apoyos</ProjectsTableHeader>
+                    <ProjectsTableHeader width={100} hiddenMobile centered>Total Reacciones</ProjectsTableHeader>
+                    <ProjectsTableHeader width={100} hiddenMobile centered>Reacciones</ProjectsTableHeader>
                     <ProjectsTableHeader width={100} hiddenMobile centered>Fecha creación</ProjectsTableHeader>
                     <ProjectsTableHeader width={100} hiddenMobile centered>Fecha de cierre</ProjectsTableHeader>
                     <ProjectsTableHeader width={120} hiddenMobile centered>Acciones</ProjectsTableHeader>
