@@ -124,8 +124,10 @@ class UserEditor extends Component {
       })
         .then((docs) => docs.json())
 
-      const decorations = comments.map((c) => c.decoration).filter((d) => d)
-
+      const decorations = comments.map((c) => {
+        c.decoration.focus.offset += 1
+        return c.decoration
+      })
       this.editor.setDecorations(decorations)
       this.setState({ comments })
     } catch (err) {
@@ -157,6 +159,39 @@ class UserEditor extends Component {
 
   editorLoad = (editor) => { this.editor = editor }
 
+  onSelect = (e) => {
+    console.log("AQUIIIIIIIIIII")
+    const selection = this.state.value.selection.toJSON()
+    if (selection.isFocused && (selection.anchor.offset !== selection.focus.offset) && !this.state.showAddComment) {
+      const s = findDOMRange(this.state.value.selection).getBoundingClientRect()
+      this.setState({
+        showAddComment: true,
+        commentsIds: [],
+        left: s.left,
+        top: s.top
+      })
+    }
+  }
+  
+  onCommentHoverIn = (id) => (e) => {
+    const top = e.clientY - 125
+    const left = e.clientX - 100
+    this.setState((prevState) => {
+      return {
+        showAddComment: false,
+        commentsIds: prevState.commentsIds.concat(id),
+        top: top,
+        left: left
+      }
+    })
+  }
+
+  onCommentHoverOut = () => (e) => {
+    this.setState({
+      commentsIds: []
+    })
+  }
+
   render () {
     if (!this.state.value) return null
     let plugins = []
@@ -185,6 +220,8 @@ class UserEditor extends Component {
         <div ref={this.myEditor}>
           <Editor
             plugins={plugins}
+            // readOnly={!this.props.isAuthor}
+            // onSelect={this.onSelect}
             ref={this.editorLoad}
             className='editor'
             schema={this.schema}
