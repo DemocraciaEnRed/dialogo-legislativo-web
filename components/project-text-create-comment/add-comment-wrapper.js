@@ -52,7 +52,7 @@ export default class AddCommentWrapper extends Component {
         (rect.left +
         (rect.width / 2)) -
         containerBound.left
-      console.log(rect)
+      // console.log(rect)
       const top =
         rect.top -
         containerBound.top + 70
