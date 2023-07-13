@@ -51,7 +51,8 @@ class UserEditor extends Component {
       value: null,
       selection: null,
       commentsIds: [],
-      comments: []
+      comments: [],
+      readOnly: false
     }
     this.editor = null
   }
@@ -74,26 +75,35 @@ class UserEditor extends Component {
   }
 
   onChange = async (change) => {
+    const changesTypes = change.operations
+    .map((o) => o.type)
+    .filter((o) => o !== 'set_value')
+    .filter((o) => o !== 'set_selection')
+    .count()
+    
+    
+    if(changesTypes === 2 && (!this.props.isAuthor && !this.props.editMode)){
+    this.setState({
+      readOnly:true,
+      value:Value.fromJSON(this.props.value)
+    })
+    this.fetchComments()
+    this.setState({
+      readOnly:false
+    })
+    }
+    
     if (this.props.isAuthor && this.props.editMode) {
       return this.setState({
-        value: change.value
-      })
+      value: change.value
+    })
     }
-
-    const changesTypes = change.operations
-      // .map(o => {
-      //   console.log(o.type)
-      //   return o
-      // })
-      .map((o) => o.type)
-      .filter((o) => o !== 'set_value')
-      .filter((o) => o !== 'set_selection')
-      .count()
-
+    
+    
     this.setState({
       value: changesTypes === 0 ? change.value : this.state.value
     })
-  }
+    }
 
   showComments = async (ids, top) => {
     this.setState({
@@ -158,20 +168,6 @@ class UserEditor extends Component {
   }
 
   editorLoad = (editor) => { this.editor = editor }
-
-  onSelect = (e) => {
-    console.log("AQUIIIIIIIIIII")
-    const selection = this.state.value.selection.toJSON()
-    if (selection.isFocused && (selection.anchor.offset !== selection.focus.offset) && !this.state.showAddComment) {
-      const s = findDOMRange(this.state.value.selection).getBoundingClientRect()
-      this.setState({
-        showAddComment: true,
-        commentsIds: [],
-        left: s.left,
-        top: s.top
-      })
-    }
-  }
   
   onCommentHoverIn = (id) => (e) => {
     const top = e.clientY - 125
@@ -220,8 +216,7 @@ class UserEditor extends Component {
         <div ref={this.myEditor}>
           <Editor
             plugins={plugins}
-            // readOnly={!this.props.isAuthor}
-            // onSelect={this.onSelect}
+            readOnly={this.state.readOnly}
             ref={this.editorLoad}
             className='editor'
             schema={this.schema}
