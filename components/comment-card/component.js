@@ -32,6 +32,27 @@ const StyledCommentCard = styled.div`
     text-align: justify;
   }
 `
+
+
+const StyledConfirmDeleteComment = styled.button`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  z-index: 100;
+  width: 308px;
+  background-color: var(--black);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  justify-content: space-around;
+  border-radius: 10px;
+  color: #FFF;
+  cursor: pointer;
+  border: none;
+`
+
+
 const StyledLikeWrapper = styled.div`
   color: ${({ liked }) => liked ? '#ef885d' : 'var(--primary-color)'};
   cursor: pointer;
@@ -103,7 +124,8 @@ class commentCard extends Component {
       liked: false,
       resolved: false,
       errorDelete: false,
-      deleted: false
+      deleted: false,
+      showDeleteMessage: false
     }
   }
 
@@ -221,8 +243,11 @@ class commentCard extends Component {
                     <StyledLikeWrapper liked={this.state.liked} onClick={this.handleLike(project._id)}>
                       <Icon icon={thumbsUp} style={{ marginRight: '5px' }} /> {this.state.likes}
                     </StyledLikeWrapper>
+                    {this.state.showDeleteMessage && <StyledConfirmDeleteComment onClick={this.handleDelete(project._id)}>
+                      Haz clic aquí para confirmar la eliminación de este comentario.
+                    </StyledConfirmDeleteComment>    }                    
                     {this.canDelete(this.props.comment, isAuthor) && !this.state.errorDelete &&
-                      <StyledDeleteWrapper onClick={this.handleDelete(project._id)}>
+                      <StyledDeleteWrapper onClick={() => this.setState({showDeleteMessage: !this.state.showDeleteMessage})}>
                         <Icon icon={trash2} style={{ marginRight: '5px' }} />
                       </StyledDeleteWrapper>
                     }
