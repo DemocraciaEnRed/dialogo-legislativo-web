@@ -362,7 +362,7 @@ class Projects extends Component {
                 <OptionsHeader onClick={() => this.toggleShowMenu('projectSort')}>
                   <div>
                   <OptionLabel isTitle>Ordenar por:</OptionLabel>
-                  <OptionLabel>{query.created === 'ASC' ? 'Más antiguos' : query.created === 'SUPP' ? 'Más apoyados' : query.created === 'DESC' && 'Más recientes' }</OptionLabel>
+                  <OptionLabel>{query.created === 'ASC' ? 'Más antiguas' : query.created === 'SUPP' ? 'Más apoyos' : query.created === 'DESC' && 'Más recientes' }</OptionLabel>
                   </div>
                   <ArrowIcon projectSort={projectSort} icon='down-arrow.svg' />
                 </OptionsHeader>
@@ -391,7 +391,7 @@ class Projects extends Component {
               <OptionsHeader onClick={() => this.toggleShowMenu('projectState')}>
                 <div>
                 <OptionLabel isTitle>Estados</OptionLabel>
-                <OptionLabel>{query.closed === null ? 'todos' : query.closed === true ? 'cerrados' : query.closed === false && 'abiertos' }</OptionLabel>
+                <OptionLabel>{query.closed === null ? 'todos' : query.closed === true ? 'finalizados' : query.closed === false && 'abiertos' }</OptionLabel>
                 </div>
                   <ArrowIcon projectState={projectState} icon='down-arrow.svg' />
               </OptionsHeader>
