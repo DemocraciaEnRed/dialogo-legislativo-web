@@ -176,6 +176,23 @@ class Profile extends Component {
     ));
   }
 
+  handleDateChange = (e) => {
+    // Elimina todos los caracteres no numéricos
+    const inputDate = e.target.value;    
+    const numericDate = inputDate.replace(/\D/g, '');
+
+    // Aplica el formato DD/MM/AAAA
+    if (numericDate.length <= 8) {
+      if (numericDate.length >= 4) {
+        this.setState({birthday: `${numericDate.slice(0, 2)}/${numericDate.slice(2, 4)}/${numericDate.slice(4)}`});
+      } else if (numericDate.length >= 4) {
+        this.setState({birthday: `${numericDate.slice(0, 2)}/${numericDate.slice(2, 4)}`});
+      } else {
+        this.setState({birthday: numericDate});
+      }    
+
+    }
+  };
 
   render () {
     const { user, isOwner, isLoading } = this.props
@@ -201,7 +218,7 @@ class Profile extends Component {
                 <ProfileInput type='text'
                   name='birthday'
                   value={this.state.birthday}
-                  onChange={this.handleChange}
+                  onChange={this.handleDateChange}
                   readOnly={!isOwner}
                   disabled={!isOwner}
                   placeholder='30/02/1900' />
